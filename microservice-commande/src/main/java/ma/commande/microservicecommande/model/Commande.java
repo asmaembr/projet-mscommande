@@ -14,18 +14,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Commande {
-    
-@Id
-@GeneratedValue(strategy = GenerationType.AUTO)
-private Long id;
-private String description;
-private int quantite;
-private LocalDate date;
-private double montant;
 
-
-
-
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private String description;
+    private Integer quantite;
+    private LocalDate date;
+    private Double montant;
 
 }

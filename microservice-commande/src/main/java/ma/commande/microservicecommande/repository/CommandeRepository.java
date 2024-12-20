@@ -10,7 +10,7 @@ import ma.commande.microservicecommande.model.Commande;
 
 @Repository
 
-public interface CommandeRepository extends JpaRepository<Commande,Long>{
+public interface CommandeRepository extends JpaRepository<Commande, Long> {
 
-List<Commande>findByDateAfter(LocalDate date);
+    public List<Commande> findByDateAfter(LocalDate date);
 }
