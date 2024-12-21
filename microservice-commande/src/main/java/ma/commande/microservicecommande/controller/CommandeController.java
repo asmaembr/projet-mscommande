@@ -1,25 +1,20 @@
 package ma.commande.microservicecommande.controller;
 
-import java.time.LocalDate;
-import java.util.List;
-
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
-import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.bind.annotation.*;
-
-
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import ma.commande.microservicecommande.config.CommandeConfig;
 import ma.commande.microservicecommande.model.Commande;
 import ma.commande.microservicecommande.repository.CommandeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.bind.annotation.*;
 
-//@CircuitBreaker(name = "myCircuitBreaker", fallbackMethod = "FallbackMessage")
-@EnableHystrixDashboard
+import java.time.LocalDate;
+import java.util.List;
+
+//@EnableHystrixDashboard
+//@EnableCircuitBreaker
+@CircuitBreaker(name = "myCircuitBreaker", fallbackMethod = "FallbackMessage")
 @Configuration
-@EnableCircuitBreaker
 @RestController
 public class CommandeController {
 
@@ -29,21 +24,24 @@ public class CommandeController {
     @Autowired
     private CommandeConfig commandeConfig;
 
-  /*  public String FallbackMessage(Throwable t) {
-        return "Commande Service is down, please try again later!";
-    }
-    */
-  @HystrixCommand(fallbackMethod = "myHistrixbuildFallbackMessage",
-          commandProperties ={@HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")},
-          threadPoolKey = "messageThreadPool")
+     public String FallbackMessage(Throwable t) {
+          return "Commande Service is down, please try again later!";
+      }
+
+    /* private String myHistrixbuildFallbackMessage() {
+         return "Message from myHistrixbuildFallbackMessage() : Hystrix Fallback message ( after timeout : 1 second )";
+     }
+    @HystrixCommand(fallbackMethod = "myHistrixbuildFallbackMessage",
+             commandProperties = {@HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")},
+             threadPoolKey = "messageThreadPool") */
+
     @GetMapping("/commandesparjours")
     public List<Commande> getCommandesDerniersJours() throws InterruptedException {
         LocalDate dateLimite = LocalDate.now().minusDays(commandeConfig.getCommandesLast());
         return commandeRepository.findByDateAfter(dateLimite);
     }
-    private String myHistrixbuildFallbackMessage() {
-        return "Message from myHistrixbuildFallbackMessage() : Hystrix Fallback message ( after timeout : 1 second )";
-    }
+
+
 
     @GetMapping("/commandes")
     public List<Commande> getCommandes() {
