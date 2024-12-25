@@ -1,9 +1,9 @@
-package ma.commande.microservicecommande.controller;
+package ma.commande.microservicecommandes.controller;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
-import ma.commande.microservicecommande.config.CommandeConfig;
-import ma.commande.microservicecommande.model.Commande;
-import ma.commande.microservicecommande.repository.CommandeRepository;
+import ma.commande.microservicecommandes.config.CommandeConfig;
+import ma.commande.microservicecommandes.model.Commande;
+import ma.commande.microservicecommandes.repository.CommandeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.*;
@@ -21,20 +21,15 @@ public class CommandeController {
     @Autowired
     private CommandeConfig commandeConfig;
 
-    public List<Commande> FallbackMessage(Throwable t) {
+    public List<Commande> FallbackMessage(Exception t) {
         System.out.println("Fallback triggered due to: " + t.getMessage());
         return List.of();
     }
-    /* private String myHistrixbuildFallbackMessage() {
-         return "Message from myHistrixbuildFallbackMessage() : Hystrix Fallback message ( after timeout : 1 second )";
-     }
-    @HystrixCommand(fallbackMethod = "myHistrixbuildFallbackMessage",
-             commandProperties = {@HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")},
-             threadPoolKey = "messageThreadPool") */
 
-    @CircuitBreaker(name = "myCircuitBreaker", fallbackMethod = "FallbackMessage")
     @GetMapping("/commandesparjours")
+    @CircuitBreaker(name = "myCircuitBreaker", fallbackMethod = "FallbackMessage")
     public List<Commande> getCommandesDerniersJours() throws Exception {
+        System.out.println("Commandes Last: " + commandeConfig.getCommandesLast());
         LocalDate dateLimite = LocalDate.now().minusDays(commandeConfig.getCommandesLast());
         List<Commande> commandes = commandeRepository.findByDateAfter(dateLimite);
         if (commandes.isEmpty()) {
