@@ -5,15 +5,19 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.processing.Pattern;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 
-@Entity
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Builder
+@Data
 public class Commande {
 
     @Id
@@ -21,6 +25,7 @@ public class Commande {
     private Long id;
     private String description;
     private Integer quantite;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate date;
     private Double montant;
 }
