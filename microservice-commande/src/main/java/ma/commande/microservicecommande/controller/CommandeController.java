@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 import java.util.List;
 
-//@EnableHystrixDashboard
-//@EnableCircuitBreaker
 @Configuration
 @RestController
 public class CommandeController {
@@ -23,10 +21,10 @@ public class CommandeController {
     @Autowired
     private CommandeConfig commandeConfig;
 
-     public String FallbackMessage(Throwable t) {
-          return "Commande Service is down, please try again later!";
-      }
-
+    public List<Commande> FallbackMessage(Throwable t) {
+        System.out.println("Fallback triggered due to: " + t.getMessage());
+        return List.of();
+    }
     /* private String myHistrixbuildFallbackMessage() {
          return "Message from myHistrixbuildFallbackMessage() : Hystrix Fallback message ( after timeout : 1 second )";
      }
@@ -38,12 +36,11 @@ public class CommandeController {
     @GetMapping("/commandesparjours")
     public List<Commande> getCommandesDerniersJours() throws Exception {
         LocalDate dateLimite = LocalDate.now().minusDays(commandeConfig.getCommandesLast());
-        if(commandeRepository.findByDateAfter(dateLimite).isEmpty()) {
+        List<Commande> commandes = commandeRepository.findByDateAfter(dateLimite);
+        if (commandes.isEmpty()) {
             throw new Exception("Date limite est null");
         }
-        else {
-            return commandeRepository.findByDateAfter(dateLimite);
-        }
+        return commandes;
     }
 
 
