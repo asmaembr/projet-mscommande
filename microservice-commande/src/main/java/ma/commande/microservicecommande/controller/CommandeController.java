@@ -13,7 +13,6 @@ import java.util.List;
 
 //@EnableHystrixDashboard
 //@EnableCircuitBreaker
-@CircuitBreaker(name = "myCircuitBreaker", fallbackMethod = "FallbackMessage")
 @Configuration
 @RestController
 public class CommandeController {
@@ -35,10 +34,16 @@ public class CommandeController {
              commandProperties = {@HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")},
              threadPoolKey = "messageThreadPool") */
 
+    @CircuitBreaker(name = "myCircuitBreaker", fallbackMethod = "FallbackMessage")
     @GetMapping("/commandesparjours")
-    public List<Commande> getCommandesDerniersJours() throws InterruptedException {
+    public List<Commande> getCommandesDerniersJours() throws Exception {
         LocalDate dateLimite = LocalDate.now().minusDays(commandeConfig.getCommandesLast());
-        return commandeRepository.findByDateAfter(dateLimite);
+        if(commandeRepository.findByDateAfter(dateLimite).isEmpty()) {
+            throw new Exception("Date limite est null");
+        }
+        else {
+            return commandeRepository.findByDateAfter(dateLimite);
+        }
     }
 
 
