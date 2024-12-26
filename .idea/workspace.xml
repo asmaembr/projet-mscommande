@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3246ed1c-94df-4946-b38b-fadb06a553d1" name="Changes" comment="ms commande re created to solve dependency error">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/projet-mscommande.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="660a5d72-5833-4f76-89f3-b762eacd03a8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-commandes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-commandes/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/MicroserviceCommandesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/MicroserviceCommandesApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/model/Commande.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/model/Commande.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/service/CommandeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,25 +23,40 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "asmaembr"
+  }
 }]]></component>
-  <component name="ProjectId" id="2qj9nmSiCJaM6t6Ux8NVAMvxSrJ" />
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/asmaembr/projet-mscommande.git",
+    "accountId": "7bd629df-c57d-44e2-8413-efa42ffeb933"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2qktwESGYTzu8MbpgBQsHGhsQyc" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "JUnit.MicroserviceCommandesApplicationTests.contextLoads.executor": "Run",
+    "Maven.config-server [clean,install].executor": "Run",
+    "Maven.eureka-server [clean,install].executor": "Run",
     "Maven.microservice-commandes [clean,install].executor": "Run",
+    "Maven.zuul-server [clean,install].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.ConfigServerApplication.executor": "Run",
     "Spring Boot.EurekaServerApplication.executor": "Run",
     "Spring Boot.MicroserviceCommandesApplication.executor": "Run",
@@ -56,43 +69,56 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+    </option>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
+        <option value="KtorApplicationConfigurationType" />
         <option value="MicronautRunConfigurationType" />
         <option value="QuarkusRunConfigurationType" />
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ZuulServerApplication">
-    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="config-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.configserver.ConfigServerApplication" />
+  <component name="RunManager" selected="Spring Boot.MicroserviceCommandesApplication">
+    <configuration name="MicroserviceCommandesApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="microservice-commandes" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ma.commande.configserver.*" />
+          <option name="PATTERN" value="ma.commande.microservicecommandes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="ma.commande.microservicecommandes" />
+      <option name="MAIN_CLASS_NAME" value="ma.commande.microservicecommandes.MicroserviceCommandesApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="config-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.configserver.ConfigServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="eureka-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.eurekaserver.EurekaServerApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ma.commande.eurekaserver.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -100,6 +126,13 @@
     <configuration name="MicroserviceCommandesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="microservice-commandes" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.microservicecommandes.MicroserviceCommandesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroserviceProduitApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="microservice-produit" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.microservice_produit.MicroserviceProduitApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,45 +153,32 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ZuulServerApplication" />
-        <item itemvalue="Spring Boot.EurekaServerApplication" />
-        <item itemvalue="Spring Boot.ConfigServerApplication" />
+        <item itemvalue="JUnit.MicroserviceCommandesApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3246ed1c-94df-4946-b38b-fadb06a553d1" name="Changes" comment="" />
-      <created>1735165288666</created>
+      <changelist id="660a5d72-5833-4f76-89f3-b762eacd03a8" name="Changes" comment="" />
+      <created>1735218642723</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1735165288666</updated>
-      <workItem from="1735165290149" duration="1044000" />
+      <updated>1735218642723</updated>
+      <workItem from="1735218645280" duration="759000" />
+      <workItem from="1735225850367" duration="1051000" />
     </task>
-    <task id="LOCAL-00001" summary="ms commande re created to solve dependency error">
-      <option name="closed" value="true" />
-      <created>1735165341474</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1735165341474</updated>
-    </task>
-    <task id="LOCAL-00002" summary="ms commande re created to solve dependency error">
-      <option name="closed" value="true" />
-      <created>1735165357257</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1735165357257</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="ms commande re created to solve dependency error" />
-    <option name="LAST_COMMIT_MESSAGE" value="ms commande re created to solve dependency error" />
   </component>
 </project>
