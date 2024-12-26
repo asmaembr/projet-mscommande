@@ -26,23 +26,20 @@ public class CommandeController {
         return List.of();
     }
 
-    @GetMapping("/commandesparjours")
+    @GetMapping("/commandes/{date}")
     @CircuitBreaker(name = "myCircuitBreaker", fallbackMethod = "FallbackMessage")
-    public List<Commande> getCommandesDerniersJours() throws Exception {
-        System.out.println("Commandes Last: " + commandeConfig.getCommandesLast());
-        LocalDate dateLimite = LocalDate.now().minusDays(commandeConfig.getCommandesLast());
+    public List<Commande> getCommandesDerniersJours(@PathVariable Long date) throws Exception {
+        LocalDate dateLimite = LocalDate.now().minusDays(date);
         List<Commande> commandes = commandeRepository.findByDateAfter(dateLimite);
         if (commandes.isEmpty()) {
-            throw new Exception("Date limite est null");
+            throw new Exception("Aucune commande disponible dans les 10 Derniers Jours");
         }
         return commandes;
     }
 
-
-
     @GetMapping("/commandes")
     public List<Commande> getCommandes() {
-        return commandeRepository.findAll();
+        return commandeRepository.findAllByIdLessThan(commandeConfig.getCommandesLast());
     }
 
     @GetMapping("/commande/{id}")

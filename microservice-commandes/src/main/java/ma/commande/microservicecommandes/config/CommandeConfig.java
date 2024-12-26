@@ -6,13 +6,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ConfigurationProperties(prefix = "mes-config-ms")
 public class CommandeConfig {
-    private int commandesLast;
+    private Long commandesLast;
 
-    public int getCommandesLast() {
+    public Long getCommandesLast() {
         return commandesLast;
     }
 
-    public void setCommandesLast(int commandesLast) {
+    public void setCommandesLast(Long commandesLast) {
         this.commandesLast = commandesLast;
     }
 }
