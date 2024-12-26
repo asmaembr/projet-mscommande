@@ -12,6 +12,7 @@
         <module name="zuul-server" />
         <module name="config-server" />
         <module name="eureka-server" />
+        <module name="microservice-produit" />
       </profile>
       <profile name="Annotation profile for microservice-commandes" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -20,7 +21,6 @@
         <processorPath>
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
-        <module name="microservice-produit" />
         <module name="microservice-commandes" />
       </profile>
     </annotationProcessing>

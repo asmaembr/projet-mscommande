@@ -32,14 +32,18 @@ public class CommandeController {
         LocalDate dateLimite = LocalDate.now().minusDays(date);
         List<Commande> commandes = commandeRepository.findByDateAfter(dateLimite);
         if (commandes.isEmpty()) {
-            throw new Exception("Aucune commande disponible dans les 10 Derniers Jours");
+            throw new Exception("Aucune commande disponible dans les " + date + " derniers jours");
         }
         return commandes;
     }
 
     @GetMapping("/commandes")
     public List<Commande> getCommandes() {
-        return commandeRepository.findAllByIdLessThan(commandeConfig.getCommandesLast());
+        return commandeRepository.findAllByIdGreaterThan(
+                commandeRepository.findAll().size() - commandeConfig.getCommandesLast()
+        );
+
+
     }
 
     @GetMapping("/commande/{id}")
