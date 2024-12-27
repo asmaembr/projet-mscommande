@@ -5,5 +5,9 @@ public enum TypeProduit {
     ELECTRONIQUE,
     MENAGER,
     HYGIENE,
-    AUTRE
+    AUTRE;
+
+    public static TypeProduit getByIndex(int index) {
+        return TypeProduit.values()[index];
+    }
 }

@@ -13,6 +13,7 @@ import java.util.List;
 
 @Configuration
 @RestController
+@CircuitBreaker(name = "myCircuitBreaker", fallbackMethod = "FallbackMessage")
 public class CommandeController {
 
     @Autowired
@@ -27,7 +28,6 @@ public class CommandeController {
     }
 
     @GetMapping("/historique")
-    @CircuitBreaker(name = "myCircuitBreaker", fallbackMethod = "FallbackMessage")
     public List<Commande> getCommandesDerniersJours() throws Exception {
         LocalDate dateLimite = LocalDate.now().minusDays(commandeConfig.getCommandesLast());
         List<Commande> commandes = commandeRepository.findByDateAfterOrderByDateDesc(dateLimite);
@@ -38,19 +38,27 @@ public class CommandeController {
     }
 
     @GetMapping("/commandes")
-    public List<Commande> getCommandes() {
+    public List<Commande> getCommandes() throws Exception{
+        if( commandeRepository.findAll().isEmpty() ) {
+            throw new Exception("Aucune commande disponible");
+        }
         return commandeRepository.findAll();
     }
 
     @GetMapping("/commande/{id}")
-    public Commande getCommande(@PathVariable("id") Long id) {
+    public Commande getCommande(@PathVariable("id") Long id) throws Exception {
+        if( commandeRepository.findById(id).isEmpty() ) {
+            throw new Exception("Commande non trouvée");
+        }
         return commandeRepository.findById(id).orElse(null);
     }
 
     @PostMapping("/commande")
-    public Commande save(@RequestBody Commande commande) {
-        commandeRepository.save(commande);
-        return commande;
+    public Commande save(@RequestBody Commande commande) throws Exception {
+        if( commande==null ) {
+            throw new Exception("Commande vide");
+        }
+        return commandeRepository.save(commande);
     }
 
     @DeleteMapping("/commande/{id}")
