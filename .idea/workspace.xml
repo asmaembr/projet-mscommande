@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe880206-2a9c-4919-9f45-d5cdc3297bc2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="fe880206-2a9c-4919-9f45-d5cdc3297bc2" name="Changes" comment="last 10 commandes done and tested">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/controller/CommandeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/controller/CommandeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/repository/CommandeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/repository/CommandeRepository.java" afterDir="false" />
     </list>
@@ -20,10 +18,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2qllPNX7Wn5rbb1hhplSAIguHEE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -52,7 +50,7 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -121,11 +119,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1735245024378</updated>
-      <workItem from="1735245024383" duration="2357000" />
+      <workItem from="1735245024383" duration="2516000" />
+      <workItem from="1735284664114" duration="3278000" />
+      <workItem from="1735298521398" duration="525000" />
+      <workItem from="1735302513971" duration="2515000" />
     </task>
+    <task id="LOCAL-00001" summary="last 10 commandes done and tested">
+      <option name="closed" value="true" />
+      <created>1735247523234</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1735247523234</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="last 10 commandes done and tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="last 10 commandes done and tested" />
   </component>
 </project>

@@ -8,7 +8,7 @@ import java.util.List;
 
 public  interface CommandeRepository extends JpaRepository<Commande, Long> {
 
-    List<Commande> findByDateAfter(LocalDate date);
-    List<Commande> findAllByIdGreaterThan(Long index);
+    List<Commande> findByDateAfterOrderByDateDesc(LocalDate date);
+
 }
 

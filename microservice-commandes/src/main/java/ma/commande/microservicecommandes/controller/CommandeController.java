@@ -22,28 +22,24 @@ public class CommandeController {
     private CommandeConfig commandeConfig;
 
     public List<Commande> FallbackMessage(Exception t) {
-        System.out.println("Fallback triggered due to: " + t.getMessage());
+        System.out.println("\u001B[1;31mCircuit Breaker triggered due to: " + t.getMessage() + "\u001B[0m");
         return List.of();
     }
 
-    @GetMapping("/commandes/{date}")
+    @GetMapping("/historique")
     @CircuitBreaker(name = "myCircuitBreaker", fallbackMethod = "FallbackMessage")
-    public List<Commande> getCommandesDerniersJours(@PathVariable Long date) throws Exception {
-        LocalDate dateLimite = LocalDate.now().minusDays(date);
-        List<Commande> commandes = commandeRepository.findByDateAfter(dateLimite);
+    public List<Commande> getCommandesDerniersJours() throws Exception {
+        LocalDate dateLimite = LocalDate.now().minusDays(commandeConfig.getCommandesLast());
+        List<Commande> commandes = commandeRepository.findByDateAfterOrderByDateDesc(dateLimite);
         if (commandes.isEmpty()) {
-            throw new Exception("Aucune commande disponible dans les " + date + " derniers jours");
+            throw new Exception("Aucune commande disponible dans les " + commandeConfig.getCommandesLast() + " derniers jours");
         }
         return commandes;
     }
 
     @GetMapping("/commandes")
     public List<Commande> getCommandes() {
-        return commandeRepository.findAllByIdGreaterThan(
-                commandeRepository.findAll().size() - commandeConfig.getCommandesLast()
-        );
-
-
+        return commandeRepository.findAll();
     }
 
     @GetMapping("/commande/{id}")
