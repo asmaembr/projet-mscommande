@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="951263f9-fe3d-40ac-a3ff-fdeec4172d16" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-commandes.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-commandes.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/controller/CommandeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/controller/CommandeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-produit.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-produits.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-produits/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-produits/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/MicroserviceProduitsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/MicroserviceProduitsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/controller/ProduitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/controller/ProduitController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/model/Produit.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/model/Produit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/model/TypeProduit.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/model/TypeProduit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-produits/src/main/resources/boostrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-produits/src/main/resources/bootstrap.properties" afterDir="false" />
-    </list>
+    <list default="true" id="951263f9-fe3d-40ac-a3ff-fdeec4172d16" name="Changes" comment="spring doc dependency added to test the api with Swagger UI" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,30 +31,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ConfigServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.MicroserviceProduitsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ZuulServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.ConfigServerApplication.executor": "Run",
+    "Spring Boot.EurekaServerApplication.executor": "Run",
+    "Spring Boot.MicroserviceCommandesApplication.executor": "Run",
+    "Spring Boot.MicroserviceProduitsApplication.executor": "Run",
+    "Spring Boot.ZuulServerApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ma.commande.microserviceproduits.model" />
@@ -152,7 +142,7 @@
       <updated>1735306130764</updated>
       <workItem from="1735306131788" duration="932000" />
       <workItem from="1735308416588" duration="949000" />
-      <workItem from="1735310159307" duration="1652000" />
+      <workItem from="1735310159307" duration="1953000" />
     </task>
     <task id="LOCAL-00001" summary="recreatung the MS because of a typo">
       <option name="closed" value="true" />
@@ -170,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735307055200</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="spring doc dependency added to test the api with Swagger UI">
+      <option name="closed" value="true" />
+      <created>1735318988724</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1735318988724</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +177,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="recreatung the MS because of a typo" />
     <MESSAGE value="produit model created" />
-    <option name="LAST_COMMIT_MESSAGE" value="produit model created" />
+    <MESSAGE value="spring doc dependency added to test the api with Swagger UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring doc dependency added to test the api with Swagger UI" />
   </component>
 </project>
