@@ -28,7 +28,7 @@ public class MicroserviceCommandesApplication {
                 Commande commande = Commande.builder()
                         .description("Commande " + i)
                         .quantite(i * 10)
-                        .date(LocalDate.now().minusDays(i))
+                        .date(LocalDate.now().plusDays(i))
                         .montant(100.0 + i * 10.0)
                         .build();
                 repository.save(commande);
