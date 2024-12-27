@@ -1,0 +1,73 @@
+{
+  "status": "UP",
+  "components": {
+    "circuitBreakers": {
+      "status": "UNKNOWN"
+    },
+    "clientConfigServer": {
+      "status": "UP",
+      "details": {
+        "propertySources": [
+          "bootstrapProperties-configClient",
+          "bootstrapProperties-https://github.com/asmaembr/projet-mscommande.git/microservice-produits.properties"
+        ]
+      }
+    },
+    "db": {
+      "status": "UP",
+      "details": {
+        "database": "H2",
+        "validationQuery": "isValid()"
+      }
+    },
+    "discoveryComposite": {
+      "status": "UP",
+      "components": {
+        "discoveryClient": {
+          "status": "UP",
+          "details": {
+            "services": [
+              "zuul-server",
+              "microservice-produits",
+              "microservice-commandes"
+            ]
+          }
+        },
+        "eureka": {
+          "description": "Eureka discovery client has not yet successfully connected to a Eureka server",
+          "status": "UP",
+          "details": {
+            "applications": {
+              "ZUUL-SERVER": 1,
+              "MICROSERVICE-PRODUITS": 1,
+              "MICROSERVICE-COMMANDES": 1
+            }
+          }
+        }
+      }
+    },
+    "diskSpace": {
+      "status": "UP",
+      "details": {
+        "total": 486790918144,
+        "free": 270957309952,
+        "threshold": 10485760,
+        "path": "C:\\Users\\mbras\\Documents\\5IIR7\\JEE\\projet-mscommande\\.",
+        "exists": true
+      }
+    },
+    "ping": {
+      "status": "UP"
+    },
+    "refreshScope": {
+      "status": "UP"
+    },
+    "ssl": {
+      "status": "UP",
+      "details": {
+        "validChains": [],
+        "invalidChains": []
+      }
+    }
+  }
+}
