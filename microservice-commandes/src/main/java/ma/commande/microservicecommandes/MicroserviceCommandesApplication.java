@@ -24,7 +24,7 @@ public class MicroserviceCommandesApplication {
     @Bean
     public CommandLineRunner initData(CommandeRepository repository) {
         return args -> {
-            IntStream.rangeClosed(1, 40).forEach(i -> {
+            IntStream.rangeClosed(1, 20).forEach(i -> {
                 Commande commande = Commande.builder()
                         .description("Commande " + i)
                         .quantite(i * 10)
