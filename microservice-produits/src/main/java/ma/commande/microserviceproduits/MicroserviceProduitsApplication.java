@@ -1,13 +1,13 @@
-package ma.commande.microseerviceproduits;
+package ma.commande.microserviceproduits;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MicroseerviceProduitsApplication {
+public class MicroserviceProduitsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MicroseerviceProduitsApplication.class, args);
+		SpringApplication.run(MicroserviceProduitsApplication.class, args);
 	}
 
 }

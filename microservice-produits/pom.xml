@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ma.commande</groupId>
-	<artifactId>microseervice-produits</artifactId>
+	<artifactId>microservice-produits</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>microseervice-produits</name>
-	<description>microseervice-produits</description>
+	<name>microservice-produits</name>
+	<description>microservice-produits</description>
 	<url/>
 	<licenses>
 		<license/>
