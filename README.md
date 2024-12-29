@@ -7,16 +7,19 @@ This project consists of two microservices , an API gateway , an Eureka Dashbord
 3. **Zuul Server** - Runs on port `9001`.
 5. **ProduitMS** - Runs on port `9002`.
 4. **CommandeMS** - Runs on port `9003`.
+5. **ClientMS** - Runs on port `9010`.
 
 ## Port Configuration
 
-| Microservices      | Port  |
-|--------------------|-------|
-| Config Server      | 8000  |
-| Eureka Server      | 9000  |
-| Zuul Server      | 9001  |
-| Prouit Microservice (microservice-produits)      | 9002 |
-| Commande Microservice (microservice-commandes) | 9003  |
+| Microservices                                  | Port |
+|------------------------------------------------|------|
+| Config Server                                  | 8000 |
+| Eureka Server                                  | 9000 |
+| Zuul Server                                    | 9001 |
+| Prouit Microservice (microservice-produits)    | 9002 |
+| Commande Microservice (microservice-commandes) | 9003 |
+| Webapp (microservice-webapp)                   | 9010 |
+
 
 ---
 
@@ -44,19 +47,6 @@ This project consists of two microservices , an API gateway , an Eureka Dashbord
 | Get     | /produit/{id}| retourne le produit selon le id|
 | Post    | /produit | Enregistre ou met à jour le produit |
 | Delete  | /produit/{id}  |supprime le produit selon l'id|
-
----
-
-### Mise à jour du controller de l'API microservice-commandes
-
-| Methode | Request List | Function  |
-|---------|--------------|-----------|
-| Get     | /historique  | retourne les commandes par date|
-| Get     | /getProduits  | retourne les produits de cette commande|
-| Get     | /commandes   | retourne tous les commandes |
-| Get     | /commande/{id}| retourne la commande selon le id|
-| Post    | /commande | Enregistre ou met à jour les commandes |
-| Delete  | /commande/{id}  |supprime la commande selon l'id|
 
 ---
 
