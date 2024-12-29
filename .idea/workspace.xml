@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="951263f9-fe3d-40ac-a3ff-fdeec4172d16" name="Changes" comment="lombok error fixed">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="951263f9-fe3d-40ac-a3ff-fdeec4172d16" name="Changes" comment="20 commandes">
+      <change afterPath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/Service/ProduitProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/config/RestTemplateConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-commandes.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-commandes.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/MicroserviceCommandesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/MicroserviceCommandesApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-produits/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-produits/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-produits/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-produits/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/config/CommandeConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/config/PropertiesConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/controller/CommandeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/controller/CommandeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/model/Commande.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/model/Commande.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/controller/ProduitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/controller/ProduitController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +23,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -39,6 +43,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "HTTP Request.MicroserviceProduitsApplication | #1.executor": "Run",
+    "HTTP Request.MicroserviceProduitsApplication | #2.executor": "Run",
+    "HTTP Request.MicroserviceProduitsApplication | #3.executor": "Run",
     "Maven.microservice-produits [compile].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -76,11 +83,14 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="excludedTypes">
+      <set>
+        <option value="HttpClient.HttpRequestRunConfigurationType" />
+      </set>
+    </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MicroserviceProduitsApplication">
+  <component name="RunManager" selected="Spring Boot.MicroserviceCommandesApplication">
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="17" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="config-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.configserver.ConfigServerApplication" />
       <extension name="coverage">
@@ -88,16 +98,6 @@
           <option name="PATTERN" value="ma.commande.configserver.*" />
           <option name="ENABLED" value="true" />
         </pattern>
-      </extension>
-      <extension name="net.ashald.envfile">
-        <option name="IS_ENABLED" value="false" />
-        <option name="IS_SUBST" value="false" />
-        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
-        <option name="IS_IGNORE_MISSING_FILES" value="false" />
-        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
-        <ENTRIES>
-          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
-        </ENTRIES>
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -201,9 +201,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ConfigServerApplication" />
         <item itemvalue="Spring Boot.ZuulServerApplication" />
         <item itemvalue="Spring Boot.EurekaServerApplication" />
-        <item itemvalue="Spring Boot.ConfigServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +217,8 @@
       <updated>1735306130764</updated>
       <workItem from="1735306131788" duration="932000" />
       <workItem from="1735308416588" duration="949000" />
-      <workItem from="1735310159307" duration="3921000" />
+      <workItem from="1735310159307" duration="4261000" />
+      <workItem from="1735489285890" duration="3691000" />
     </task>
     <task id="LOCAL-00001" summary="recreatung the MS because of a typo">
       <option name="closed" value="true" />
@@ -251,7 +252,39 @@
       <option name="project" value="LOCAL" />
       <updated>1735319044306</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="produits projet done and requests tested">
+      <option name="closed" value="true" />
+      <created>1735321183190</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1735321183190</updated>
+    </task>
+    <task id="LOCAL-00006" summary="http requests">
+      <option name="closed" value="true" />
+      <created>1735321206792</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1735321206792</updated>
+    </task>
+    <task id="LOCAL-00007" summary="http requests deleted">
+      <option name="closed" value="true" />
+      <created>1735321246564</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1735321246564</updated>
+    </task>
+    <task id="LOCAL-00008" summary="20 commandes">
+      <option name="closed" value="true" />
+      <created>1735321325303</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1735321325303</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +295,13 @@
     <MESSAGE value="produit model created" />
     <MESSAGE value="spring doc dependency added to test the api with Swagger UI" />
     <MESSAGE value="lombok error fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="lombok error fixed" />
+    <MESSAGE value="produits projet done and requests tested" />
+    <MESSAGE value="http requests" />
+    <MESSAGE value="http requests deleted" />
+    <MESSAGE value="20 commandes" />
+    <option name="LAST_COMMIT_MESSAGE" value="20 commandes" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/projet_mscommande$MicroserviceProduitsApplication.ic" NAME="MicroserviceProduitsApplication Coverage Results" MODIFIED="1735321002163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

@@ -27,4 +27,5 @@ public class Commande {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate date;
     private Double montant;
+    private Long idProduit;
 }
