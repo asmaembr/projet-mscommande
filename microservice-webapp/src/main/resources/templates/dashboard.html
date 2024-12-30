@@ -1,10 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Gestion des Commandes </title>
 </head>
 <body>
+<table>
+    <tr>
+        <td>Nom</td>
+        <td>Prix</td>
+        <td>Type</td>
+        <td>Actions</td>
+    </tr>
+    <tr th:each="produit : ${produits}">
+        <td th:text="${produit.nom}"></td>
+        <td th:text="${produit.prix}"></td>
+        <td th:text="${produit.type}"></td>
+        <td>
+            <a th:href="@{'/deleteProduit/' + ${produit.id}}">Supprimer</a>
+        </td>
+    </tr>
+</table>
+<form method="post" th:action="@{/saveProduit}">
+    <label th:for="${produit.nom}">Nom</label>
+    <input th:field="*{produit.nom}" name="nom" placeholder="Nom">
+    <label th:for="${produit.prix}">Prix</label>
+    <input th:field="*{produit.prix}" type="text" name="prix" placeholder="Prix">
+    <label th:for="${produit.type}">Type</label>
+    <select th:field="*{produit.type}">
+        <option th:each="type : ${T(ma.commande.microservicewebapp.model.TypeProduit).values()}"
+                th:value="${T(ma.commande.microservicewebapp.model.TypeProduit).getByName(type)}"
+                th:text="${type}">
+        </option>
+    </select>
+    <button th:type="submit">Ajouter</button>
+</form>
+
 
 </body>
 </html>

@@ -7,9 +7,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-@SpringBootApplication
 @EnableConfigurationProperties
 @EnableDiscoveryClient
+@SpringBootApplication
 public class MicroserviceWebappApplication {
 
 	public static void main(String[] args) {

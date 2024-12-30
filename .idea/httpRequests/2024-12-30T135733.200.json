@@ -1,0 +1,16 @@
+{
+  "circuitBreakers": {
+    "myCircuitBreaker": {
+      "failureRate": "40.0%",
+      "slowCallRate": "0.0%",
+      "failureRateThreshold": "50.0%",
+      "slowCallRateThreshold": "100.0%",
+      "bufferedCalls": 5,
+      "failedCalls": 2,
+      "slowCalls": 0,
+      "slowFailedCalls": 0,
+      "notPermittedCalls": 0,
+      "state": "CLOSED"
+    }
+  }
+}

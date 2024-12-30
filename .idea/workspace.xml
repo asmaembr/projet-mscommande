@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33e4e273-6c24-46f2-a13f-628ef7e6ec84" name="Changes" comment="webapp that communicates with both of the apis">
-      <change afterPath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/model/Commande.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/model/Produit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/model/TypeProduit.java" afterDir="false" />
+    <list default="true" id="33e4e273-6c24-46f2-a13f-628ef7e6ec84" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/MicroserviceCommandesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/MicroserviceCommandesApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/model/Produit.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/model/Produit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/config/RestTemplateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/config/RestTemplateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/MicroserviceWebappApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/MicroserviceWebappApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/config/PropertiesConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/config/PropertiesConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/model/TypeProduit.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/model/TypeProduit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/service/ClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/service/ClientProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/resources/templates/dashboard.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,10 +31,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2qtx1yiqy49K9f4SYUHjhjmtjZ7" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -42,12 +42,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "HTTP Request.MicroserviceProduitsApplication | #4.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.ConfigServerApplication.executor": "Run",
+    "Spring Boot.EurekaServerApplication.executor": "Run",
+    "Spring Boot.MicroserviceCommandesApplication.executor": "Run",
+    "Spring Boot.MicroserviceProduitsApplication.executor": "Run",
+    "Spring Boot.MicroserviceWebappApplication.executor": "Run",
+    "Spring Boot.ZuulServerApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -56,6 +62,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
     "vue.rearranger.settings.migration": "true"
   }
@@ -63,21 +70,81 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\templates" />
+      <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static" />
       <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ma.commande.microservicewebapp.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ConfigServerApplication">
-    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="config-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.configserver.ConfigServerApplication" />
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.MicroserviceWebappApplication">
+    <configuration name="MicroserviceProduitsApplication | #4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/MicroserviceProduitsApplication.http" index="4" requestIdentifier="#4" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.eurekaserver.EurekaServerApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ma.commande.configserver.*" />
+          <option name="PATTERN" value="ma.commande.eurekaserver.*" />
           <option name="ENABLED" value="true" />
         </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroserviceCommandesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="microservice-commandes" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.microservicecommandes.MicroserviceCommandesApplication" />
+      <option name="VM_PARAMETERS" value="-Dserver.port=8080" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ma.commande.microservicecommandes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroserviceProduitsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="microservice-produits" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.microserviceproduits.MicroserviceProduitsApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ma.commande.microserviceproduits.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -91,9 +158,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ZuulServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="zuul-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.zuul_server.ZuulServerApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ma.commande.zuul_server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="HTTP Request.MicroserviceProduitsApplication | #4" />
+      <item itemvalue="Spring Boot.MicroserviceWebappApplication" />
+      <item itemvalue="Spring Boot.EurekaServerApplication" />
+      <item itemvalue="Spring Boot.MicroserviceCommandesApplication" />
+      <item itemvalue="Spring Boot.MicroserviceProduitsApplication" />
+      <item itemvalue="Spring Boot.ZuulServerApplication" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ConfigServerApplication" />
+        <item itemvalue="Spring Boot.MicroserviceCommandesApplication" />
+        <item itemvalue="Spring Boot.MicroserviceProduitsApplication" />
+        <item itemvalue="Spring Boot.ZuulServerApplication" />
+        <item itemvalue="Spring Boot.EurekaServerApplication" />
+        <item itemvalue="HTTP Request.MicroserviceProduitsApplication | #4" />
       </list>
     </recent_temporary>
   </component>
@@ -106,6 +198,7 @@
       <option name="presentableId" value="Default" />
       <updated>1735495464099</updated>
       <workItem from="1735495465458" duration="3648000" />
+      <workItem from="1735560786204" duration="13605000" />
     </task>
     <task id="LOCAL-00001" summary="webapp that communicates with both of the apis">
       <option name="closed" value="true" />
@@ -115,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735495928040</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="changes in the client controller">
+      <option name="closed" value="true" />
+      <created>1735560881263</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1735560881263</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +224,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="webapp that communicates with both of the apis" />
-    <option name="LAST_COMMIT_MESSAGE" value="webapp that communicates with both of the apis" />
+    <MESSAGE value="changes in the client controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes in the client controller" />
   </component>
 </project>

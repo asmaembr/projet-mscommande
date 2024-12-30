@@ -14,8 +14,10 @@ import java.util.List;
 @Configuration
 @Service
 public class ClientProxy {
+
     @Autowired
     private RestTemplate restTemplate;
+
     @Autowired
     private PropertiesConfig propertiesConfig;
 
@@ -30,9 +32,9 @@ public class ClientProxy {
         return restTemplate.getForObject(url, Produit.class);
     }
 
-    public Produit saveProduit(Produit produit) {
+    public void saveProduit(Produit produit) {
         String url = propertiesConfig.getProduitApiUrl() + "/produit";
-        return restTemplate.postForObject(url, produit, Produit.class);
+        restTemplate.postForObject(url, produit, Produit.class);
     }
 
     public void deleteProduit(Long id) {
@@ -57,7 +59,6 @@ public class ClientProxy {
     }
 
     public void deleteCommande(Long id) {
-
         String url = propertiesConfig.getCommandeApiUrl() + "/commande/" + id;
         restTemplate.delete(url);
     }

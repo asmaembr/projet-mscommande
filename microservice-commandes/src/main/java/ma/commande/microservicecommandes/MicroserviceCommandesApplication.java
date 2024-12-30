@@ -19,9 +19,7 @@ import java.util.stream.IntStream;
 @SpringBootApplication
 public class MicroserviceCommandesApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(MicroserviceCommandesApplication.class, args);
-    }
+    public static void main(String[] args) {SpringApplication.run(MicroserviceCommandesApplication.class, args);}
 
     @Bean
     public CommandLineRunner initData(CommandeRepository repository) {
@@ -33,12 +31,10 @@ public class MicroserviceCommandesApplication {
                         .quantite(i * 10)
                         .date(LocalDate.now().plusDays(i))
                         .montant(100.0 + i * 10.0)
-                        .idProduit(random.nextLong(40))
+                        .idProduit(random.nextLong(1,40))
                         .build();
                 repository.save(commande);
             });
         };
     }
-
-
 }
