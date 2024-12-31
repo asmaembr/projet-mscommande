@@ -48,10 +48,6 @@ public class ClientProxy {
         return Arrays.asList(commandes);
     }
 
-    public Commande getCommandeById(Long id) {
-        String url = propertiesConfig.getCommandeApiUrl() + "/commande/" + id;
-        return restTemplate.getForObject(url, Commande.class);
-    }
 
     public Commande saveCommande(Commande commande) {
         String url = propertiesConfig.getCommandeApiUrl() + "/commande";
@@ -69,4 +65,14 @@ public class ClientProxy {
         return Arrays.asList(commandes);
     }
 
+    public List<Commande> getCommandesByProduitId(Long id) {
+        String url = propertiesConfig.getCommandeApiUrl() + "/commandes";
+        Commande[] commandes = restTemplate.getForObject(url, Commande[].class);
+        return Arrays.stream(commandes).map(commande -> {
+            if (commande.getIdProduit().equals(id)) {
+                return commande;
+            }
+            return null;
+        }).toList();
+    }
 }

@@ -17,35 +17,39 @@ public class ClientController {
     @Autowired
     private ClientProxy clientProxy;
 
+    private boolean showHistory = false;
+
     @GetMapping(value = "/")
     public String dashbord(Model model) {
         model.addAttribute("produits", clientProxy.getAllProduits());
         model.addAttribute("produit", new Produit());
-        model.addAttribute("commandes", clientProxy.getAllCommandes());
+        model.addAttribute("commandes", clientProxy.getHistoriqueCommandes());
         model.addAttribute("commande", new Commande());
-        model.addAttribute("idproduit", clientProxy.getProduitById(1L).getId());
-        model.addAttribute("nomproduit", clientProxy.getProduitById(1L).getNom());
-        model.addAttribute("prixproduit", clientProxy.getProduitById(1L).getPrix());
+        model.addAttribute("showHistory", false);
         return "dashboard";
     }
 
     @PostMapping(value = "/saveProduit")
     public String saveProduit(@ModelAttribute Produit produit) {
-        System.out.println(produit);
         clientProxy.saveProduit(produit);
         return "redirect:/";
     }
+
     @GetMapping(value = "/passerCommande/{id}")
-    public void passerCommande(@PathVariable Long id , Model model) {
+    public String passerCommande(@PathVariable Long id, Model model) {
         Produit prod = clientProxy.getProduitById(id);
-        model.addAttribute("idproduit",prod.getId());
-        model.addAttribute("nomproduit",prod.getNom());
-        model.addAttribute("prixproduit",prod.getPrix());
+        Commande commande = new Commande();
+        commande.setIdProduit(prod.getId());
+        model.addAttribute("commande", commande);
+        model.addAttribute("selectedProduit", prod);
+        model.addAttribute("commandes", clientProxy.getCommandesByProduitId(id));
+        return "dashboard";
     }
+
     @PostMapping(value = "/saveCommande")
-    public String saveCommande(@RequestBody Commande commande) {
+    public String saveCommande(@ModelAttribute Commande commande) {
         clientProxy.saveCommande(commande);
-        return "redirect:/dashboard";
+        return "redirect:/";
     }
 
     @GetMapping(value = "/deleteProduit/{id}")
@@ -58,6 +62,16 @@ public class ClientController {
     public String deleteCommande(@PathVariable Long id) {
         clientProxy.deleteCommande(id);
         return "redirect:/";
+    }
+
+    @GetMapping("/toggleHistory")
+    public String toggleHistory(@RequestParam(name = "showHistory", required = false) Boolean showHistory, Model model) {
+        model.addAttribute("produits", clientProxy.getAllProduits());
+        model.addAttribute("produit", new Produit());
+        model.addAttribute("commandes", clientProxy.getAllCommandes());
+        model.addAttribute("commande", new Commande());
+        model.addAttribute("showHistory", showHistory != null ? !showHistory : true);
+        return "dashboard";
     }
 
 }

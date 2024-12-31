@@ -2,57 +2,87 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gestion des Commandes </title>
+    <title>Gestion des Commandes</title>
 </head>
 <body>
-<table>
-    <tr>
-        <td>Nom</td>
-        <td>Prix</td>
-        <td>Type</td>
-        <td>Actions</td>
-    </tr>
-    <tr th:each="produit : ${produits}">
-        <td th:text="${produit.nom}"></td>
-        <td th:text="${produit.prix}"></td>
-        <td th:text="${produit.type}"></td>
-        <td>
-            <a th:href="@{'/deleteProduit/' + ${produit.id}}">Supprimer</a>
-            <a th:href="@{'/passerCommande/'+${produit.id}}"> Passer commande</a>
-            <a th:href="@{'/getCommandes/'+${produit.id}}"> Voir les commandes</a>
-        </td>
-    </tr>
-</table>
-<form method="post" th:action="@{/saveProduit}">
-    <label th:for="*{produit.nom}">Nom</label>
-    <input th:field="*{produit.nom}" name="nom" placeholder="Nom">
-    <label th:for="*{produit.prix}">Prix</label>
-    <input th:field="*{produit.prix}" type="text" name="prix" placeholder="Prix">
-    <label th:for="*{produit.type}">Type</label>
-    <select th:field="*{produit.type}">
-        <option th:each="type : ${T(ma.commande.microservicewebapp.model.TypeProduit).values()}"
-                th:value="${T(ma.commande.microservicewebapp.model.TypeProduit).getByName(type)}"
-                th:text="${type}">
-        </option>
-    </select>
-    <button th:type="submit">Ajouter</button>
-</form>
+<div style="display: flex; gap: 20px;">
+    <!-- List of Products -->
+    <div>
+        <h3>Liste des Produits</h3>
+        <table>
+            <tr>
+                <td>Nom</td>
+                <td>Prix</td>
+                <td>Type</td>
+                <td>Actions</td>
+            </tr>
+            <tr th:each="produit : ${produits}">
+                <td th:text="${produit.nom}"></td>
+                <td th:text="${produit.prix}"></td>
+                <td th:text="${produit.type}"></td>
+                <td>
+                    <a th:href="@{'/deleteProduit/' + ${produit.id}}">Supprimer</a>
+                    <a th:href="@{'/passerCommande/' + ${produit.id}}">Passer Commande</a>
+                </td>
+            </tr>
+        </table>
+    </div>
 
-<form method="post" th:action="@{/saveCommande}">
-    <label th:for="*{commande.description}">Description</label>
-    <input th:field="*{commande.description}" name="description" placeholder="Description">
-    <label th:for="*{commande.date}">Date</label>
-    <input th:field="*{commande.date}" type="date" name="date">
-    <label th:for="*{commande.quantite}">Quantite</label>
-    <input th:field="*{commande.quantite}" type="number" name="quantite">
-    <label th:for="*{commande.idProduit}" th:text="*{nomproduit}">Le nom pour le produit est </label>
-    <input th:field="*{commande.idProduit}" type="text" th:value="*{idproduit}" disabled hidden="hidden">
-    <label th:for="*{commande.montant}">Montant</label>
-    <input th:field="*{commande.montant}" th:value="*{commande.getQuantite() * prixproduit}">
-    <button th:type="submit">Ajouter</button>
-</form>
+    <!-- Forms for Product and Commande -->
+    <div>
+        <!-- Product Creation Form -->
+        <h3>Ajouter un Produit</h3>
+        <form method="post" th:action="@{/saveProduit}">
+            <label>Nom</label>
+            <input type="text" name="nom" placeholder="Nom">
+            <label>Prix</label>
+            <input type="text" name="prix" placeholder="Prix">
+            <label>Type</label>
+            <select name="type">
+                <option th:each="type : ${T(ma.commande.microservicewebapp.model.TypeProduit).values()}"
+                        th:value="${type}" th:text="${type}"></option>
+            </select>
+            <button type="submit">Ajouter</button>
+        </form>
 
+        <!-- Commande Creation Form -->
+        <h3>Passer une Commande</h3>
+        <form method="post" th:action="@{/saveCommande}" th:if="${selectedProduit != null}">
+            <input type="hidden" name="idProduit" th:value="${selectedProduit.id}">
+            <label>Description</label>
+            <input type="text" name="description" placeholder="Description">
+            <label>Quantité</label>
+            <input type="number" name="quantite" placeholder="Quantité">
+            <label>Date</label>
+            <input type="date" name="date">
+            <label>Montant</label>
+            <input type="text" name="montant" placeholder="Montant">
+            <button type="submit">Passer Commande</button>
+        </form>
+    </div>
 
-
+    <!-- List of Commandes -->
+    <div>
+        <h3>Liste des Commandes</h3>
+        <table>
+            <tr>
+                <td>Description</td>
+                <td>Quantité</td>
+                <td>Date</td>
+                <td>Montant</td>
+                <td>Actions</td>
+            </tr>
+            <tr th:each="commande : ${commandes}">
+                <td th:text="${commande.description}"></td>
+                <td th:text="${commande.quantite}"></td>
+                <td th:text="${commande.date}"></td>
+                <td th:text="${commande.montant}"></td>
+                <td>
+                    <a th:href="@{'/deleteCommande/' + ${commande.id}}">Supprimer</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
 </body>
 </html>
