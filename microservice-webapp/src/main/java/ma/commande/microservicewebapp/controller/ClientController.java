@@ -5,12 +5,10 @@ import ma.commande.microservicewebapp.model.Produit;
 import ma.commande.microservicewebapp.service.ClientProxy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 @Configuration
 @Controller
@@ -19,34 +17,47 @@ public class ClientController {
     @Autowired
     private ClientProxy clientProxy;
 
-    @GetMapping(value = {"/dashboard","/"})
+    @GetMapping(value = "/")
     public String dashbord(Model model) {
         model.addAttribute("produits", clientProxy.getAllProduits());
         model.addAttribute("produit", new Produit());
         model.addAttribute("commandes", clientProxy.getAllCommandes());
+        model.addAttribute("commande", new Commande());
+        model.addAttribute("idproduit", clientProxy.getProduitById(1L).getId());
+        model.addAttribute("nomproduit", clientProxy.getProduitById(1L).getNom());
+        model.addAttribute("prixproduit", clientProxy.getProduitById(1L).getPrix());
         return "dashboard";
     }
 
     @PostMapping(value = "/saveProduit")
-    public String saveProduit(@RequestBody Produit produit) {
+    public String saveProduit(@ModelAttribute Produit produit) {
+        System.out.println(produit);
         clientProxy.saveProduit(produit);
-        return "redirect:/dashboard";
+        return "redirect:/";
     }
-
+    @GetMapping(value = "/passerCommande/{id}")
+    public void passerCommande(@PathVariable Long id , Model model) {
+        Produit prod = clientProxy.getProduitById(id);
+        model.addAttribute("idproduit",prod.getId());
+        model.addAttribute("nomproduit",prod.getNom());
+        model.addAttribute("prixproduit",prod.getPrix());
+    }
     @PostMapping(value = "/saveCommande")
     public String saveCommande(@RequestBody Commande commande) {
+        clientProxy.saveCommande(commande);
         return "redirect:/dashboard";
     }
 
-    @PostMapping(value = "/deleteProduit/{id}")
+    @GetMapping(value = "/deleteProduit/{id}")
     public String deleteProduit(@PathVariable Long id) {
         clientProxy.deleteProduit(id);
-        return "redirect:/dashboard";
+        return "redirect:/";
     }
 
-    @PostMapping(value = "/deleteCommande/{id}")
+    @GetMapping(value = "/deleteCommande/{id}")
     public String deleteCommande(@PathVariable Long id) {
-        return "redirect:/dashboard";
+        clientProxy.deleteCommande(id);
+        return "redirect:/";
     }
 
 }

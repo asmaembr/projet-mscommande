@@ -6,13 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="33e4e273-6c24-46f2-a13f-628ef7e6ec84" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/MicroserviceCommandesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/MicroserviceCommandesApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/MicroserviceWebappApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/MicroserviceWebappApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/config/PropertiesConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/config/PropertiesConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/config/RestTemplateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/config/RestTemplateConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/model/TypeProduit.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/model/TypeProduit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/service/ClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/service/ClientProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/resources/templates/dashboard.html" afterDir="false" />
     </list>
@@ -31,6 +28,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "asmaembr"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/asmaembr/projet-mscommande.git",
+    "accountId": "7bd629df-c57d-44e2-8413-efa42ffeb933"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
@@ -48,6 +57,7 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.ConfigServerApplication.executor": "Run",
     "Spring Boot.EurekaServerApplication.executor": "Run",
     "Spring Boot.MicroserviceCommandesApplication.executor": "Run",
@@ -87,8 +97,18 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.MicroserviceWebappApplication">
-    <configuration name="MicroserviceProduitsApplication | #4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/MicroserviceProduitsApplication.http" index="4" requestIdentifier="#4" runType="Run single request">
-      <method v="2" />
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="config-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.configserver.ConfigServerApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ma.commande.configserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="eureka-server" />
@@ -172,8 +192,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="HTTP Request.MicroserviceProduitsApplication | #4" />
       <item itemvalue="Spring Boot.MicroserviceWebappApplication" />
+      <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
       <item itemvalue="Spring Boot.MicroserviceCommandesApplication" />
       <item itemvalue="Spring Boot.MicroserviceProduitsApplication" />
@@ -181,13 +201,21 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.MicroserviceCommandesApplication" />
+        <item itemvalue="Spring Boot.ConfigServerApplication" />
         <item itemvalue="Spring Boot.MicroserviceProduitsApplication" />
+        <item itemvalue="Spring Boot.MicroserviceCommandesApplication" />
         <item itemvalue="Spring Boot.ZuulServerApplication" />
         <item itemvalue="Spring Boot.EurekaServerApplication" />
-        <item itemvalue="HTTP Request.MicroserviceProduitsApplication | #4" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -199,6 +227,7 @@
       <updated>1735495464099</updated>
       <workItem from="1735495465458" duration="3648000" />
       <workItem from="1735560786204" duration="13605000" />
+      <workItem from="1735631046892" duration="8118000" />
     </task>
     <task id="LOCAL-00001" summary="webapp that communicates with both of the apis">
       <option name="closed" value="true" />

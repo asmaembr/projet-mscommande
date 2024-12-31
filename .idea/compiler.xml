@@ -2,18 +2,13 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true">
-        <processorPath useClasspath="false" />
-      </profile>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false" />
-        <module name="microservice-produits" />
         <module name="zuul-server" />
         <module name="config-server" />
-        <module name="microservice-commandes" />
         <module name="eureka-server" />
       </profile>
       <profile name="Annotation profile for microservice-webapp" enabled="true">
@@ -25,7 +20,20 @@
         </processorPath>
         <module name="microservice-webapp" />
       </profile>
+      <profile name="Annotation profile for microservice-produits" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath>
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="microservice-produits" />
+        <module name="microservice-commandes" />
+      </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="microservice-produit" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

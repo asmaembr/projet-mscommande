@@ -48,7 +48,7 @@ public class ClientProxy {
         return Arrays.asList(commandes);
     }
 
-    public  Commande getCommandeById(Long id) {
+    public Commande getCommandeById(Long id) {
         String url = propertiesConfig.getCommandeApiUrl() + "/commande/" + id;
         return restTemplate.getForObject(url, Commande.class);
     }

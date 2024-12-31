@@ -18,15 +18,17 @@
         <td th:text="${produit.type}"></td>
         <td>
             <a th:href="@{'/deleteProduit/' + ${produit.id}}">Supprimer</a>
+            <a th:href="@{'/passerCommande/'+${produit.id}}"> Passer commande</a>
+            <a th:href="@{'/getCommandes/'+${produit.id}}"> Voir les commandes</a>
         </td>
     </tr>
 </table>
 <form method="post" th:action="@{/saveProduit}">
-    <label th:for="${produit.nom}">Nom</label>
+    <label th:for="*{produit.nom}">Nom</label>
     <input th:field="*{produit.nom}" name="nom" placeholder="Nom">
-    <label th:for="${produit.prix}">Prix</label>
+    <label th:for="*{produit.prix}">Prix</label>
     <input th:field="*{produit.prix}" type="text" name="prix" placeholder="Prix">
-    <label th:for="${produit.type}">Type</label>
+    <label th:for="*{produit.type}">Type</label>
     <select th:field="*{produit.type}">
         <option th:each="type : ${T(ma.commande.microservicewebapp.model.TypeProduit).values()}"
                 th:value="${T(ma.commande.microservicewebapp.model.TypeProduit).getByName(type)}"
@@ -35,6 +37,21 @@
     </select>
     <button th:type="submit">Ajouter</button>
 </form>
+
+<form method="post" th:action="@{/saveCommande}">
+    <label th:for="*{commande.description}">Description</label>
+    <input th:field="*{commande.description}" name="description" placeholder="Description">
+    <label th:for="*{commande.date}">Date</label>
+    <input th:field="*{commande.date}" type="date" name="date">
+    <label th:for="*{commande.quantite}">Quantite</label>
+    <input th:field="*{commande.quantite}" type="number" name="quantite">
+    <label th:for="*{commande.idProduit}" th:text="*{nomproduit}">Le nom pour le produit est </label>
+    <input th:field="*{commande.idProduit}" type="text" th:value="*{idproduit}" disabled hidden="hidden">
+    <label th:for="*{commande.montant}">Montant</label>
+    <input th:field="*{commande.montant}" th:value="*{commande.getQuantite() * prixproduit}">
+    <button th:type="submit">Ajouter</button>
+</form>
+
 
 
 </body>
