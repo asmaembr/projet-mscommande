@@ -42,6 +42,7 @@ public class CommandeController {
     @GetMapping("/historique")
     public List<Commande> getCommandesDerniersJours() throws Exception {
         LocalDate dateLimite = LocalDate.now().minusDays(propertiesConfig.getCommandesLast());
+        System.out.println("dateLimite = " + dateLimite);
         List<Commande> commandes = commandeRepository.findByDateAfterOrderByDateDesc(dateLimite);
         if (commandes.isEmpty()) {
             throw new Exception("Aucune commande disponible dans les " + propertiesConfig.getCommandesLast() + " derniers jours");

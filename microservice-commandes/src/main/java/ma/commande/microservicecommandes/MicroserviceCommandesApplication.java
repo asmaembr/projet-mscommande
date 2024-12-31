@@ -29,7 +29,7 @@ public class MicroserviceCommandesApplication {
                 Commande commande = Commande.builder()
                         .description("Commande " + i)
                         .quantite(i * 10)
-                        .date(LocalDate.now().plusDays(i))
+                        .date(LocalDate.now().minusDays(random.nextLong(1,9)))
                         .montant(100.0 + i * 10.0)
                         .idProduit(random.nextLong(1,40))
                         .build();
