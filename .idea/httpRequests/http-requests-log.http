@@ -1,3 +1,23 @@
+POST http://localhost:9000/actuator/refresh
+Accept: application/vnd.spring-boot.actuator.v3+json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+content-length: 0
+
+<> 2024-12-31T193134.200.json
+
+###
+
+GET http://localhost:9002/produits
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-12-31T192458.200.json
+
+###
+
 GET http://localhost:9002/actuator/circuitbreakers
 Accept: application/vnd.spring-boot.actuator.v3+json
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
