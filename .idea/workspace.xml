@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33e4e273-6c24-46f2-a13f-628ef7e6ec84" name="Changes" comment="fixing actions for products list">
-      <change afterPath="$PROJECT_DIR$/microservice-webapp/src/main/resources/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-webapp/src/main/resources/static/icon/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-webapp/src/main/resources/static/js/script.js" afterDir="false" />
+    <list default="true" id="33e4e273-6c24-46f2-a13f-628ef7e6ec84" name="Changes" comment="both of the forms working perfectly crud done for both">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/service/ClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/service/ClientProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/resources/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/resources/static/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/resources/templates/dashboard.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -221,7 +219,7 @@
       <workItem from="1735560786204" duration="13605000" />
       <workItem from="1735631046892" duration="8118000" />
       <workItem from="1735742708169" duration="11348000" />
-      <workItem from="1735767033718" duration="5211000" />
+      <workItem from="1735767033718" duration="7805000" />
     </task>
     <task id="LOCAL-00001" summary="webapp that communicates with both of the apis">
       <option name="closed" value="true" />
@@ -279,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735767923873</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="both of the forms working perfectly crud done for both">
+      <option name="closed" value="true" />
+      <created>1735772649738</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1735772649738</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,6 +310,7 @@
     <MESSAGE value="testing historique again" />
     <MESSAGE value="forms created and layout done" />
     <MESSAGE value="fixing actions for products list" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing actions for products list" />
+    <MESSAGE value="both of the forms working perfectly crud done for both" />
+    <option name="LAST_COMMIT_MESSAGE" value="both of the forms working perfectly crud done for both" />
   </component>
 </project>

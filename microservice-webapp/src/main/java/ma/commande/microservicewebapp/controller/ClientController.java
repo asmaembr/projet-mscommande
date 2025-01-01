@@ -38,8 +38,8 @@ public class ClientController {
     public String editProduit(@PathVariable Long id, Model model) {
         Produit produit = clientProxy.getProduitById(id);
         model.addAttribute("produits", clientProxy.getAllProduits());
-        model.addAttribute("commandes", clientProxy.getHistoriqueCommandes());
-        model.addAttribute("name","Historique des commandes");
+        model.addAttribute("commandes", clientProxy.getCommandesByProduitId(id));
+        model.addAttribute("name","Commande du "+clientProxy.getProduitById(id).getNom());
         model.addAttribute("commande", new Commande());
         model.addAttribute(("showcommande"), false);
         model.addAttribute(("showproduit"), true);

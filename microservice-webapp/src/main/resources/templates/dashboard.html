@@ -11,7 +11,6 @@
     and script.js for the search option in the select option in the formulaire of ajout commande   -->
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
     <link rel="stylesheet" th:href="@{/css/style.css}">
-    <script rel="stylesheet" th:href="@{/js/script.js}"></script>
 </head>
 
 <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
@@ -126,9 +125,9 @@
                         <label>Montant</label>
                         <input type="text" th:field="*{commande.montant}" name="montant" placeholder="Montant">
                         <label>De quel produit s'agit t'il ?</label>
-                        <select name="idProduit" th:field="*{commande.idProduit}">
-                            <option th:each="produit : ${produits}" th:value="${produit.id}"
-                                    th:text="${produit.nom}"></option>
+                        <select name="idProduit" th:field="*{commande.idProduit}" id="productSelect">
+                               <option value="">--Choisir un produit--</option>
+                               <option th:each="produit : ${produits}" th:value="${produit.id}" th:text="${produit.nom}"></option>
                         </select>
                         <button class="btn btn-outline-success" type="submit">Valider</button>
                     </form>
@@ -139,7 +138,7 @@
 
     <!-- List of Commandes (right) -->
     <div class="right">
-        <h4>Liste des Commandes</h4>
+        <h4 th:text="${name}"></h4>
         <div class="scrollable-table-container">
             <table class="table table-hover table-success text-center">
                 <thead>
