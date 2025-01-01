@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Gestion des Commandes</title>
-    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
     <style>
         .flex {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
-            align-items: flex-start; /* Align to the top */
+            align-items: flex-start;
         }
+
         .left, .right {
-            width: 45%; /* Set width for the lists */
+            width: 45%;
         }
+
         .center {
-            width: 45%; /* Set width for the form section */
+            width: 45%;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center align the forms */
-            gap: 20px; /* Space between the forms */
+            align-items: center;
+            gap: 20px;
         }
 
         .scrollable-table-container {
@@ -28,7 +30,7 @@
             border-radius: 10px;
             scrollbar-width: none;
             -ms-overflow-style: none;
-            width: 100%; /* Adjust table width */
+            width: 100%;
         }
 
         /* Hides scrollbar for WebKit-based browsers (Chrome, Safari) */
@@ -42,6 +44,7 @@
             background-color: transparent;
             border-radius: 10px;
         }
+
         form label {
             display: block;
             margin-bottom: 5px;
@@ -62,7 +65,8 @@
 <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">GESTION DES COMMANDES</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
@@ -90,14 +94,18 @@
                     <td th:text="${produit.type}"></td>
                     <td>
                         <div>
+                            <a th:href="@{'/details/' + ${produit.id}}" class="btn btn-link p-0 m-0">
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/shopping-cart--v1.png"
+                                     alt="shopping-cart--v1"/>
+                            </a>
+                            <a th:href="@{'/editProduit/' + ${produit.id}}" class="btn btn-link p-0 m-0">
+                                <img width="30" height="30" src="https://img.icons8.com/sf-black-filled/64/edit.png"
+                                     alt="edit"/>
+                            </a>
                             <a th:href="@{'/deleteProduit/' + ${produit.id}}" class="btn btn-link p-0 m-0">
-                                <img width="30" height="30" src="https://img.icons8.com/external-bartama-glyph-64-bartama-graphic/64/external-Add-Product-e-commerce-glyph-bartama-glyph-64-bartama-graphic.png" alt="external-Add-Product-e-commerce-glyph-bartama-glyph-64-bartama-graphic"/>
-                            </a>
-                            <a th:href="@{'/deleteProduit/' + ${produit.id}}"  class="btn btn-link p-0 m-0">
-                                <img width="30" height="30" src="https://img.icons8.com/sf-black-filled/64/edit.png" alt="edit"/>
-                            </a>
-                            <a th:href="@{'/deleteProduit/' + ${produit.id}}"  class="btn btn-link p-0 m-0">
-                                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FA5252/filled-trash.png" alt="filled-trash"/>
+                                <img width="30" height="30"
+                                     src="https://img.icons8.com/ios-glyphs/30/FA5252/filled-trash.png"
+                                     alt="filled-trash"/>
                             </a>
                         </div>
                     </td>
@@ -169,10 +177,12 @@
                     <td th:text="${commande.montant}"></td>
                     <td>
                         <a th:href="@{'/deleteCommande/' + ${commande.id}}" class="btn btn-link p-0 m-0">
-                            <img width="30" height="30" src="https://img.icons8.com/sf-black-filled/64/edit.png" alt="edit"/>
+                            <img width="30" height="30" src="https://img.icons8.com/sf-black-filled/64/edit.png"
+                                 alt="edit"/>
                         </a>
                         <a th:href="@{'/deleteCommande/' + ${commande.id}}" class="btn btn-link p-0 m-0">
-                            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FA5252/filled-trash.png" alt="filled-trash"/>
+                            <img width="30" height="30"
+                                 src="https://img.icons8.com/ios-glyphs/30/FA5252/filled-trash.png" alt="filled-trash"/>
                         </a>
                     </td>
                 </tr>

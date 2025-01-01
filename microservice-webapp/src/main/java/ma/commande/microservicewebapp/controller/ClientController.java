@@ -5,10 +5,14 @@ import ma.commande.microservicewebapp.model.Produit;
 import ma.commande.microservicewebapp.service.ClientProxy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 @Configuration
 @Controller
@@ -17,38 +21,39 @@ public class ClientController {
     @Autowired
     private ClientProxy clientProxy;
 
-    private boolean showHistory = false;
-
     @GetMapping(value = "/")
     public String dashbord(Model model) {
         model.addAttribute("produits", clientProxy.getAllProduits());
         model.addAttribute("produit", new Produit());
         model.addAttribute("commandes", clientProxy.getHistoriqueCommandes());
         model.addAttribute("commande", new Commande());
-        model.addAttribute("showHistory", false);
         return "dashboard";
     }
 
-    @PostMapping(value = "/saveProduit")
-    public String saveProduit(@ModelAttribute Produit produit) {
-        clientProxy.saveProduit(produit);
-        return "redirect:/";
+
+    @GetMapping(value = "/editProduit/{id}")
+    public String editProduit(@PathVariable Long id, Model model) {
+        Produit produit = clientProxy.getProduitById(id);
+        model.addAttribute("produit", produit);
+        return "dashboard";
     }
 
-    @GetMapping(value = "/passerCommande/{id}")
-    public String passerCommande(@PathVariable Long id, Model model) {
-        Produit prod = clientProxy.getProduitById(id);
-        Commande commande = new Commande();
-        commande.setIdProduit(prod.getId());
-        model.addAttribute("commande", commande);
-        model.addAttribute("selectedProduit", prod);
-        model.addAttribute("commandes", clientProxy.getCommandesByProduitId(id));
+    @GetMapping(value = "/details/{id}")
+    public String voirCommande(@PathVariable Long id, Model model) {
+        List<Commande> commandes = clientProxy.getCommandesByProduitId(id);
+        model.addAttribute("commandes", commandes);
         return "dashboard";
     }
 
     @PostMapping(value = "/saveCommande")
     public String saveCommande(@ModelAttribute Commande commande) {
         clientProxy.saveCommande(commande);
+        return "redirect:/";
+    }
+
+    @PostMapping(value = "/saveProduit")
+    public String saveProduit(@ModelAttribute Produit produit) {
+        clientProxy.saveProduit(produit);
         return "redirect:/";
     }
 
@@ -64,14 +69,5 @@ public class ClientController {
         return "redirect:/";
     }
 
-    @GetMapping("/toggleHistory")
-    public String toggleHistory(@RequestParam(name = "showHistory", required = false) Boolean showHistory, Model model) {
-        model.addAttribute("produits", clientProxy.getAllProduits());
-        model.addAttribute("produit", new Produit());
-        model.addAttribute("commandes", clientProxy.getAllCommandes());
-        model.addAttribute("commande", new Commande());
-        model.addAttribute("showHistory", showHistory != null ? !showHistory : true);
-        return "dashboard";
-    }
 
 }
