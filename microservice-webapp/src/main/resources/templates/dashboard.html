@@ -2,64 +2,16 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" th:href="@{/icon/favicon.png}">
     <title>Gestion des Commandes</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+    <!-- My own files css for style.css and the rest is handled by bootswatch
+    and script.js for the search option in the select option in the formulaire of ajout commande   -->
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
-    <style>
-        .flex {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-            align-items: flex-start;
-        }
-
-        .left, .right {
-            width: 45%;
-        }
-
-        .center {
-            width: 45%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .scrollable-table-container {
-            max-height: 500px;
-            overflow-y: auto;
-            border-radius: 10px;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-            width: 100%;
-        }
-
-        /* Hides scrollbar for WebKit-based browsers (Chrome, Safari) */
-        .scrollable-table-container::-webkit-scrollbar {
-            display: none;
-        }
-
-        form {
-            width: 100%;
-            padding: 20px;
-            background-color: transparent;
-            border-radius: 10px;
-        }
-
-        form label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        form input,
-        form select {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-    </style>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script rel="stylesheet" th:href="@{/js/script.js}"></script>
 </head>
 
 <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
@@ -116,41 +68,71 @@
     </div>
 
     <!-- Center (Forms) -->
-    <div class="center">
+    <div class="center accordion">
+        <h4>Formulaires d'édition</h4>
         <!-- Add Product Form -->
-        <div class="card text-white bg-primary">
-            <div class="card-header">Ajouter Produit</div>
-            <div class="card-body">
-                <form method="post" th:action="@{/saveProduit}">
-                    <label>Nom</label>
-                    <input type="text" name="nom" placeholder="Nom">
-                    <label>Prix</label>
-                    <input type="text" name="prix" placeholder="Prix">
-                    <label>Type</label>
-                    <select name="type">
-                        <option th:each="type : ${T(ma.commande.microservicewebapp.model.TypeProduit).values()}"
-                                th:value="${type}" th:text="${type}"></option>
-                    </select>
-                    <button class="btn btn-outline-success" type="submit">Ajouter</button>
-                </form>
+        <div class="card w-100">
+            <div class="card-header ">
+                <a class="btn btn-link text-white text-decoration-none"
+                   data-bs-toggle="collapse" href="#addProductForm"
+                   role="button" th:attr="aria-expanded=${showproduit}"
+                   aria-controls="addProductForm">
+                    Ajouter Produit
+                </a>
+            </div>
+            <div id="addProductForm"
+                 class="collapse"
+                 th:classappend="${showproduit} ? 'show' : ''">
+                <div class="card-body bg-primary text-white">
+                    <form method="post" th:action="@{/saveProduit}">
+                        <input type="number" th:field="*{produit.id}" hidden="hidden">
+                        <label>Nom</label>
+                        <input type="text" th:field="*{produit.nom}" name="nom" placeholder="Nom">
+                        <label>Prix</label>
+                        <input type="text" th:field="*{produit.prix}" name="prix" placeholder="Prix">
+                        <label>Type</label>
+                        <select name="type" th:field="*{produit.type}">
+                            <option th:each="type : ${T(ma.commande.microservicewebapp.model.TypeProduit).values()}"
+                                    th:value="${type}" th:text="${type}"></option>
+                        </select>
+                        <button class="btn btn-outline-success" type="submit">Valider</button>
+                    </form>
+                </div>
             </div>
         </div>
 
         <!-- Add Commande Form -->
-        <div class="card text-white bg-primary">
-            <div class="card-header">Ajouter Commande</div>
-            <div class="card-body">
-                <form method="post" th:action="@{/saveCommande}">
-                    <label>Description</label>
-                    <input type="text" name="description" placeholder="Description">
-                    <label>Quantité</label>
-                    <input type="text" name="quantite" placeholder="Quantité">
-                    <label>Date</label>
-                    <input type="text" name="date" placeholder="Date">
-                    <label>Montant</label>
-                    <input type="text" name="montant" placeholder="Montant">
-                    <button class="btn btn-outline-success" type="submit">Ajouter</button>
-                </form>
+        <div class="card w-100">
+            <div class="card-header">
+                <a class="btn btn-link text-white text-decoration-none" data-bs-toggle="collapse"
+                   href="#addCommandeForm" role="button"
+                   th:attr="aria-expanded=${showcommande}"
+                   aria-controls="addCommandeForm">
+                    Ajouter Commande
+                </a>
+            </div>
+            <div id="addCommandeForm" class="collapse"
+            th:classappend="${showcommande} ? 'show' : ''">
+                <div class="card-body bg-primary text-white">
+                    <form method="post" th:action="@{/saveCommande}">
+                        <input type="number" th:field="*{commande.id}" hidden="hidden">
+                        <label>Description</label>
+                        <input type="text" th:field="*{commande.description}" name="description"
+                               placeholder="Description">
+                        <label>Quantité</label>
+                        <input type="text" th:field="*{commande.quantite}" name="quantite" placeholder="Quantité">
+                        <label>Date</label>
+                        <input type="text" th:field="*{commande.date}" name="date" placeholder="Date">
+                        <label>Montant</label>
+                        <input type="text" th:field="*{commande.montant}" name="montant" placeholder="Montant">
+                        <label>De quel produit s'agit t'il ?</label>
+                        <select name="idProduit" th:field="*{commande.idProduit}">
+                            <option th:each="produit : ${produits}" th:value="${produit.id}"
+                                    th:text="${produit.nom}"></option>
+                        </select>
+                        <button class="btn btn-outline-success" type="submit">Valider</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -176,7 +158,7 @@
                     <td th:text="${commande.date}"></td>
                     <td th:text="${commande.montant}"></td>
                     <td>
-                        <a th:href="@{'/deleteCommande/' + ${commande.id}}" class="btn btn-link p-0 m-0">
+                        <a th:href="@{'/editCommande/' + ${commande.id}}" class="btn btn-link p-0 m-0">
                             <img width="30" height="30" src="https://img.icons8.com/sf-black-filled/64/edit.png"
                                  alt="edit"/>
                         </a>

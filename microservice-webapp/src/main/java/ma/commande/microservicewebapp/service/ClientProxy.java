@@ -10,6 +10,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Configuration
 @Service
@@ -31,6 +32,10 @@ public class ClientProxy {
         String url = propertiesConfig.getProduitApiUrl() + "/produit/" + id;
         return restTemplate.getForObject(url, Produit.class);
     }
+    public Commande getCommandeById(Long id) {
+        String url = propertiesConfig.getCommandeApiUrl() + "/commande/" + id;
+        return restTemplate.getForObject(url, Commande.class);
+    }
 
     public void saveProduit(Produit produit) {
         String url = propertiesConfig.getProduitApiUrl() + "/produit";
@@ -41,18 +46,14 @@ public class ClientProxy {
         String url = propertiesConfig.getProduitApiUrl() + "/produit/" + id;
         restTemplate.delete(url);
     }
-
-    public List<Commande> getAllCommandes() {
-        String url = propertiesConfig.getCommandeApiUrl() + "/commandes";
-        Commande[] commandes = restTemplate.getForObject(url, Commande[].class);
-        return Arrays.asList(commandes);
-    }
-
-
-    public Commande saveCommande(Commande commande) {
+    public void saveCommande(Commande commande) {
         String url = propertiesConfig.getCommandeApiUrl() + "/commande";
-        return restTemplate.postForObject(url, commande, Commande.class);
+        restTemplate.postForObject(url, commande, Commande.class);
     }
+
+
+
+
 
     public void deleteCommande(Long id) {
         String url = propertiesConfig.getCommandeApiUrl() + "/commande/" + id;
@@ -68,11 +69,9 @@ public class ClientProxy {
     public List<Commande> getCommandesByProduitId(Long id) {
         String url = propertiesConfig.getCommandeApiUrl() + "/commandes";
         Commande[] commandes = restTemplate.getForObject(url, Commande[].class);
-        return Arrays.stream(commandes).map(commande -> {
-            if (commande.getIdProduit().equals(id)) {
-                return commande;
-            }
-            return null;
-        }).toList();
+
+        return Arrays.stream(commandes)
+                .filter(commande -> commande.getIdProduit().equals(id))
+                .collect(Collectors.toList());
     }
 }

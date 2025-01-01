@@ -25,8 +25,11 @@ public class ClientController {
     public String dashbord(Model model) {
         model.addAttribute("produits", clientProxy.getAllProduits());
         model.addAttribute("produit", new Produit());
+        model.addAttribute("name","Historique des commandes");
         model.addAttribute("commandes", clientProxy.getHistoriqueCommandes());
         model.addAttribute("commande", new Commande());
+        model.addAttribute(("showcommande"), false);
+        model.addAttribute(("showproduit"), true);
         return "dashboard";
     }
 
@@ -34,13 +37,37 @@ public class ClientController {
     @GetMapping(value = "/editProduit/{id}")
     public String editProduit(@PathVariable Long id, Model model) {
         Produit produit = clientProxy.getProduitById(id);
+        model.addAttribute("produits", clientProxy.getAllProduits());
+        model.addAttribute("commandes", clientProxy.getHistoriqueCommandes());
+        model.addAttribute("name","Historique des commandes");
+        model.addAttribute("commande", new Commande());
+        model.addAttribute(("showcommande"), false);
+        model.addAttribute(("showproduit"), true);
         model.addAttribute("produit", produit);
+        return "dashboard";
+    }
+    @GetMapping(value = "/editCommande/{id}")
+    public String editCommande(@PathVariable Long id, Model model) {
+        Commande commande = clientProxy.getCommandeById(id);
+        model.addAttribute("produits", clientProxy.getAllProduits());
+        model.addAttribute("commandes", clientProxy.getHistoriqueCommandes());
+        model.addAttribute("name","Historique des commandes");
+        model.addAttribute("commande",commande);
+        model.addAttribute(("showcommande"), true);
+        model.addAttribute(("showproduit"), false);
+        model.addAttribute("produit", new Produit());
         return "dashboard";
     }
 
     @GetMapping(value = "/details/{id}")
     public String voirCommande(@PathVariable Long id, Model model) {
         List<Commande> commandes = clientProxy.getCommandesByProduitId(id);
+        model.addAttribute("produits", clientProxy.getAllProduits());
+        model.addAttribute("produit", new Produit());
+        model.addAttribute("name","Commande du "+clientProxy.getProduitById(id).getNom());
+        model.addAttribute("commande", new Commande());
+        model.addAttribute(("showcommande"), false);
+        model.addAttribute(("showproduit"), false);
         model.addAttribute("commandes", commandes);
         return "dashboard";
     }
