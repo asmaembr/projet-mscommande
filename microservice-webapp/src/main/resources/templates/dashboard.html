@@ -3,85 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <title>Gestion des Commandes</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+    <style>
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            align-items: flex-start; /* Align to the top */
+        }
+        .left, .right {
+            width: 45%; /* Set width for the lists */
+        }
+        .center {
+            width: 45%; /* Set width for the form section */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align the forms */
+            gap: 20px; /* Space between the forms */
+        }
+
+        .scrollable-table-container {
+            max-height: 500px;
+            overflow-y: auto;
+            border-radius: 10px;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            width: 100%; /* Adjust table width */
+        }
+
+        /* Hides scrollbar for WebKit-based browsers (Chrome, Safari) */
+        .scrollable-table-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        form {
+            width: 100%;
+            padding: 20px;
+            background-color: transparent;
+            border-radius: 10px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input,
+        form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
 </head>
+
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">GESTION DES COMMANDES</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+
 <body>
-<div style="display: flex; gap: 20px;">
-    <!-- List of Products -->
-    <div>
-        <h3>Liste des Produits</h3>
-        <table>
-            <tr>
-                <td>Nom</td>
-                <td>Prix</td>
-                <td>Type</td>
-                <td>Actions</td>
-            </tr>
-            <tr th:each="produit : ${produits}">
-                <td th:text="${produit.nom}"></td>
-                <td th:text="${produit.prix}"></td>
-                <td th:text="${produit.type}"></td>
-                <td>
-                    <a th:href="@{'/deleteProduit/' + ${produit.id}}">Supprimer</a>
-                    <a th:href="@{'/passerCommande/' + ${produit.id}}">Passer Commande</a>
-                </td>
-            </tr>
-        </table>
+<div class="flex">
+    <!-- List of Products (left) -->
+    <div class="left">
+        <h4>Liste des Produits</h4>
+        <div class="scrollable-table-container">
+            <table class="table table-hover table-primary text-center">
+                <thead>
+                <tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="produit : ${produits}">
+                    <td th:text="${produit.nom}"></td>
+                    <td th:text="${produit.prix}"></td>
+                    <td th:text="${produit.type}"></td>
+                    <td>
+                        <div>
+                            <a th:href="@{'/deleteProduit/' + ${produit.id}}" class="btn btn-link p-0 m-0">
+                                <img width="30" height="30" src="https://img.icons8.com/external-bartama-glyph-64-bartama-graphic/64/external-Add-Product-e-commerce-glyph-bartama-glyph-64-bartama-graphic.png" alt="external-Add-Product-e-commerce-glyph-bartama-glyph-64-bartama-graphic"/>
+                            </a>
+                            <a th:href="@{'/deleteProduit/' + ${produit.id}}"  class="btn btn-link p-0 m-0">
+                                <img width="30" height="30" src="https://img.icons8.com/sf-black-filled/64/edit.png" alt="edit"/>
+                            </a>
+                            <a th:href="@{'/deleteProduit/' + ${produit.id}}"  class="btn btn-link p-0 m-0">
+                                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FA5252/filled-trash.png" alt="filled-trash"/>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
-    <!-- Forms for Product and Commande -->
-    <div>
-        <!-- Product Creation Form -->
-        <h3>Ajouter un Produit</h3>
-        <form method="post" th:action="@{/saveProduit}">
-            <label>Nom</label>
-            <input type="text" name="nom" placeholder="Nom">
-            <label>Prix</label>
-            <input type="text" name="prix" placeholder="Prix">
-            <label>Type</label>
-            <select name="type">
-                <option th:each="type : ${T(ma.commande.microservicewebapp.model.TypeProduit).values()}"
-                        th:value="${type}" th:text="${type}"></option>
-            </select>
-            <button type="submit">Ajouter</button>
-        </form>
+    <!-- Center (Forms) -->
+    <div class="center">
+        <!-- Add Product Form -->
+        <div class="card text-white bg-primary">
+            <div class="card-header">Ajouter Produit</div>
+            <div class="card-body">
+                <form method="post" th:action="@{/saveProduit}">
+                    <label>Nom</label>
+                    <input type="text" name="nom" placeholder="Nom">
+                    <label>Prix</label>
+                    <input type="text" name="prix" placeholder="Prix">
+                    <label>Type</label>
+                    <select name="type">
+                        <option th:each="type : ${T(ma.commande.microservicewebapp.model.TypeProduit).values()}"
+                                th:value="${type}" th:text="${type}"></option>
+                    </select>
+                    <button class="btn btn-outline-success" type="submit">Ajouter</button>
+                </form>
+            </div>
+        </div>
 
-        <!-- Commande Creation Form -->
-        <h3>Passer une Commande</h3>
-        <form method="post" th:action="@{/saveCommande}" th:if="${selectedProduit != null}">
-            <input type="hidden" name="idProduit" th:value="${selectedProduit.id}">
-            <label>Description</label>
-            <input type="text" name="description" placeholder="Description">
-            <label>Quantité</label>
-            <input type="number" name="quantite" placeholder="Quantité">
-            <label>Date</label>
-            <input type="date" name="date">
-            <label>Montant</label>
-            <input type="text" name="montant" placeholder="Montant">
-            <button type="submit">Passer Commande</button>
-        </form>
+        <!-- Add Commande Form -->
+        <div class="card text-white bg-primary">
+            <div class="card-header">Ajouter Commande</div>
+            <div class="card-body">
+                <form method="post" th:action="@{/saveCommande}">
+                    <label>Description</label>
+                    <input type="text" name="description" placeholder="Description">
+                    <label>Quantité</label>
+                    <input type="text" name="quantite" placeholder="Quantité">
+                    <label>Date</label>
+                    <input type="text" name="date" placeholder="Date">
+                    <label>Montant</label>
+                    <input type="text" name="montant" placeholder="Montant">
+                    <button class="btn btn-outline-success" type="submit">Ajouter</button>
+                </form>
+            </div>
+        </div>
     </div>
 
-    <!-- List of Commandes -->
-    <div>
-        <h3>Liste des Commandes</h3>
-        <table>
-            <tr>
-                <td>Description</td>
-                <td>Quantité</td>
-                <td>Date</td>
-                <td>Montant</td>
-                <td>Actions</td>
-            </tr>
-            <tr th:each="commande : ${commandes}">
-                <td th:text="${commande.description}"></td>
-                <td th:text="${commande.quantite}"></td>
-                <td th:text="${commande.date}"></td>
-                <td th:text="${commande.montant}"></td>
-                <td>
-                    <a th:href="@{'/deleteCommande/' + ${commande.id}}">Supprimer</a>
-                </td>
-            </tr>
-        </table>
+    <!-- List of Commandes (right) -->
+    <div class="right">
+        <h4>Liste des Commandes</h4>
+        <div class="scrollable-table-container">
+            <table class="table table-hover table-success text-center">
+                <thead>
+                <tr>
+                    <th scope="col">Description</th>
+                    <th scope="col">Quantité</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Montant</th>
+                    <th scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="commande : ${commandes}">
+                    <td th:text="${commande.description}"></td>
+                    <td th:text="${commande.quantite}"></td>
+                    <td th:text="${commande.date}"></td>
+                    <td th:text="${commande.montant}"></td>
+                    <td>
+                        <a th:href="@{'/deleteCommande/' + ${commande.id}}" class="btn btn-link p-0 m-0">
+                            <img width="30" height="30" src="https://img.icons8.com/sf-black-filled/64/edit.png" alt="edit"/>
+                        </a>
+                        <a th:href="@{'/deleteCommande/' + ${commande.id}}" class="btn btn-link p-0 m-0">
+                            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FA5252/filled-trash.png" alt="filled-trash"/>
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 </body>
