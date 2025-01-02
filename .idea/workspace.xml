@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33e4e273-6c24-46f2-a13f-628ef7e6ec84" name="Changes" comment="both of the forms working perfectly crud done for both">
+    <list default="true" id="33e4e273-6c24-46f2-a13f-628ef7e6ec84" name="Changes" comment="ittle tweeks before ending the project :&#10;tweek 1 = search funtionnality deleted &#10;tweek 2 = showcommande form and show produit form &#10;tweek 3 = historique of the product even if its for edit">
+      <change afterPath="$PROJECT_DIR$/microservice-webapp/src/main/resources/static/icon/icon.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/controller/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/resources/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/resources/static/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/resources/static/js/script.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/resources/templates/dashboard.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,14 +86,15 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static\css" />
+      <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static\icon" />
       <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static\css\icons" />
       <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static\icon" />
+      <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static\css" />
       <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static\js" />
       <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static\style" />
-      <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static\css" />
-      <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static\icon" />
       <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static\" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -219,7 +220,7 @@
       <workItem from="1735560786204" duration="13605000" />
       <workItem from="1735631046892" duration="8118000" />
       <workItem from="1735742708169" duration="11348000" />
-      <workItem from="1735767033718" duration="7805000" />
+      <workItem from="1735767033718" duration="12138000" />
     </task>
     <task id="LOCAL-00001" summary="webapp that communicates with both of the apis">
       <option name="closed" value="true" />
@@ -285,7 +286,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735772649738</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ittle tweeks before ending the project :&#10;tweek 1 = search funtionnality deleted &#10;tweek 2 = showcommande form and show produit form &#10;tweek 3 = historique of the product even if its for edit">
+      <option name="closed" value="true" />
+      <created>1735774939722</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1735774939722</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,6 +320,7 @@
     <MESSAGE value="forms created and layout done" />
     <MESSAGE value="fixing actions for products list" />
     <MESSAGE value="both of the forms working perfectly crud done for both" />
-    <option name="LAST_COMMIT_MESSAGE" value="both of the forms working perfectly crud done for both" />
+    <MESSAGE value="ittle tweeks before ending the project :&#10;tweek 1 = search funtionnality deleted &#10;tweek 2 = showcommande form and show produit form &#10;tweek 3 = historique of the product even if its for edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="ittle tweeks before ending the project :&#10;tweek 1 = search funtionnality deleted &#10;tweek 2 = showcommande form and show produit form &#10;tweek 3 = historique of the product even if its for edit" />
   </component>
 </project>

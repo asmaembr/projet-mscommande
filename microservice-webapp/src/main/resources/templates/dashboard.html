@@ -6,16 +6,17 @@
     <title>Gestion des Commandes</title>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
     <!-- My own files css for style.css and the rest is handled by bootswatch
     and script.js for the search option in the select option in the formulaire of ajout commande   -->
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 
-<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/">GESTION DES COMMANDES</a>
+<nav class="navbar navbar-expand-lg bg-white" data-bs-theme="light">
+    <div class="container-fluid  d-flex justify-content-center align-items-center">
+        <a class="navbar-brand" href="/">
+           <h3><img th:src="@{/icon/icon.gif}" alt="cart"> Gestion des Commandes </h3> </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
                 aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -27,7 +28,7 @@
 <div class="flex">
     <!-- List of Products (left) -->
     <div class="left">
-        <h4>Liste des Produits</h4>
+        <h4 class="text-black">Liste des Produits</h4>
         <div class="scrollable-table-container">
             <table class="table table-hover table-primary text-center">
                 <thead>
@@ -68,11 +69,11 @@
 
     <!-- Center (Forms) -->
     <div class="center accordion">
-        <h4>Formulaires d'édition</h4>
+        <h4 class="text-black">Formulaires d'édition</h4>
         <!-- Add Product Form -->
-        <div class="card w-100">
-            <div class="card-header ">
-                <a class="btn btn-link text-white text-decoration-none"
+        <div class="card border-warning bg-light w-100">
+            <div class="card-header bg-light ">
+                <a class="btn btn-link text-black text-decoration-none"
                    data-bs-toggle="collapse" href="#addProductForm"
                    role="button" th:attr="aria-expanded=${showproduit}"
                    aria-controls="addProductForm">
@@ -82,7 +83,7 @@
             <div id="addProductForm"
                  class="collapse"
                  th:classappend="${showproduit} ? 'show' : ''">
-                <div class="card-body bg-primary text-white">
+                <div class="card-body text-white">
                     <form method="post" th:action="@{/saveProduit}">
                         <input type="number" th:field="*{produit.id}" hidden="hidden">
                         <label>Nom</label>
@@ -94,16 +95,16 @@
                             <option th:each="type : ${T(ma.commande.microservicewebapp.model.TypeProduit).values()}"
                                     th:value="${type}" th:text="${type}"></option>
                         </select>
-                        <button class="btn btn-outline-success" type="submit">Valider</button>
+                        <button class="btn btn-warning " type="submit">Valider</button>
                     </form>
                 </div>
             </div>
         </div>
 
         <!-- Add Commande Form -->
-        <div class="card w-100">
-            <div class="card-header">
-                <a class="btn btn-link text-white text-decoration-none" data-bs-toggle="collapse"
+            <div class="card border-warning bg-light w-100">
+            <div class="card-header bg-light ">
+                <a class="btn btn-link text-black text-decoration-none" data-bs-toggle="collapse"
                    href="#addCommandeForm" role="button"
                    th:attr="aria-expanded=${showcommande}"
                    aria-controls="addCommandeForm">
@@ -112,7 +113,7 @@
             </div>
             <div id="addCommandeForm" class="collapse"
             th:classappend="${showcommande} ? 'show' : ''">
-                <div class="card-body bg-primary text-white">
+                <div class="card-body text-white">
                     <form method="post" th:action="@{/saveCommande}">
                         <input type="number" th:field="*{commande.id}" hidden="hidden">
                         <label>Description</label>
@@ -129,7 +130,7 @@
                                <option value="">--Choisir un produit--</option>
                                <option th:each="produit : ${produits}" th:value="${produit.id}" th:text="${produit.nom}"></option>
                         </select>
-                        <button class="btn btn-outline-success" type="submit">Valider</button>
+                        <button class="btn btn-warning" type="submit">Valider</button>
                     </form>
                 </div>
             </div>
@@ -138,7 +139,7 @@
 
     <!-- List of Commandes (right) -->
     <div class="right">
-        <h4 th:text="${name}"></h4>
+        <h4 class="text-black" th:text="${name}"></h4>
         <div class="scrollable-table-container">
             <table class="table table-hover table-success text-center">
                 <thead>
