@@ -50,6 +50,10 @@ This project consists of two microservices , an API gateway , an Eureka Dashbord
 
 ---
 
+# Schema de notre application
+
+![Schema](ms-projetcommande-JEE.png)
+
 ### Developed By
 
 - **Asmae Moubarriz**
