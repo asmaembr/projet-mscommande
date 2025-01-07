@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="33e4e273-6c24-46f2-a13f-628ef7e6ec84" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+    <list default="true" id="33e4e273-6c24-46f2-a13f-628ef7e6ec84" name="Changes" comment="ittle tweeks before ending the project :&#10;tweek 1 = search funtionnality deleted &#10;tweek 2 = showcommande form and show produit form &#10;tweek 3 = historique of the product even if its for edit">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/resources/templates/dashboard.html" afterDir="false" />
+>>>>>>> 90d71b91a470b463a66f016a4c4ebd6ac5ba0271
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +39,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/asmaembr/projet-mscommande.git&quot;,
+    &quot;url&quot;: &quot;http://github.com/asmaembr/projet-mscommande.git&quot;,
     &quot;accountId&quot;: &quot;7bd629df-c57d-44e2-8413-efa42ffeb933&quot;
   }
 }</component>
@@ -75,7 +82,11 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+<<<<<<< HEAD
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+=======
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+>>>>>>> 90d71b91a470b463a66f016a4c4ebd6ac5ba0271
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -111,10 +122,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MicroserviceProduitsApplication">
-    <configuration name="MicroserviceCommandesApplication | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/MicroserviceCommandesApplication.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.ZuulServerApplication">
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="config-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.configserver.ConfigServerApplication" />
@@ -186,9 +194,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ZuulServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="zuul-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.zuul_server.ZuulServerApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ma.commande.zuul_server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="HTTP Request.MicroserviceCommandesApplication | #1" />
       <item itemvalue="Spring Boot.MicroserviceWebappApplication" />
+      <item itemvalue="Spring Boot.ZuulServerApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
       <item itemvalue="Spring Boot.MicroserviceCommandesApplication" />
@@ -198,11 +219,19 @@
       <list>
         <item itemvalue="Spring Boot.MicroserviceProduitsApplication" />
         <item itemvalue="Spring Boot.MicroserviceCommandesApplication" />
+        <item itemvalue="Spring Boot.ZuulServerApplication" />
         <item itemvalue="Spring Boot.EurekaServerApplication" />
         <item itemvalue="Spring Boot.ConfigServerApplication" />
-        <item itemvalue="HTTP Request.MicroserviceCommandesApplication | #1" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -216,8 +245,14 @@
       <workItem from="1735560786204" duration="13605000" />
       <workItem from="1735631046892" duration="8118000" />
       <workItem from="1735742708169" duration="11348000" />
+<<<<<<< HEAD
       <workItem from="1735767033718" duration="12596000" />
       <workItem from="1736277455559" duration="2432000" />
+=======
+      <workItem from="1735767033718" duration="12138000" />
+      <workItem from="1735824360638" duration="219000" />
+      <workItem from="1735824601408" duration="2560000" />
+>>>>>>> 90d71b91a470b463a66f016a4c4ebd6ac5ba0271
     </task>
     <task id="LOCAL-00001" summary="webapp that communicates with both of the apis">
       <option name="closed" value="true" />

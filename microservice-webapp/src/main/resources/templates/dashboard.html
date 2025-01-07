@@ -30,7 +30,7 @@
     <div class="left">
         <h4 class="text-black">Liste des Produits</h4>
         <div class="scrollable-table-container">
-            <table class="table table-hover table-primary text-center">
+            <table class="table table-hover table-dark text-center">
                 <thead>
                 <tr>
                     <th scope="col">Nom</th>
@@ -47,11 +47,11 @@
                     <td>
                         <div>
                             <a th:href="@{'/details/' + ${produit.id}}" class="btn btn-link p-0 m-0">
-                                <img width="48" height="48" src="https://img.icons8.com/color/48/shopping-cart--v1.png"
-                                     alt="shopping-cart--v1"/>
+                                <img width="32" height="32" src="https://img.icons8.com/stamp/32/FFFFFF/fast-cart.png"
+                                     alt="fast-cart"/>
                             </a>
                             <a th:href="@{'/editProduit/' + ${produit.id}}" class="btn btn-link p-0 m-0">
-                                <img width="30" height="30" src="https://img.icons8.com/sf-black-filled/64/edit.png"
+                                <img width="30" height="30" src="https://img.icons8.com/sf-black-filled/64/FFFFFF/edit.png"
                                      alt="edit"/>
                             </a>
                             <a th:href="@{'/deleteProduit/' + ${produit.id}}" class="btn btn-link p-0 m-0">
@@ -71,9 +71,9 @@
     <div class="center accordion">
         <h4 class="text-black">Formulaires d'édition</h4>
         <!-- Add Product Form -->
-        <div class="card border-warning bg-light w-100">
-            <div class="card-header bg-light ">
-                <a class="btn btn-link text-black text-decoration-none"
+        <div class="card bg-dark w-100">
+            <div class="card-header bg-dark text-center">
+                <a class="btn btn-link text-white text-decoration-none"
                    data-bs-toggle="collapse" href="#addProductForm"
                    role="button" th:attr="aria-expanded=${showproduit}"
                    aria-controls="addProductForm">
@@ -95,16 +95,16 @@
                             <option th:each="type : ${T(ma.commande.microservicewebapp.model.TypeProduit).values()}"
                                     th:value="${type}" th:text="${type}"></option>
                         </select>
-                        <button class="btn btn-warning " type="submit">Valider</button>
+                        <button class="btn btn-success" type="submit">Valider</button>
                     </form>
                 </div>
             </div>
         </div>
 
         <!-- Add Commande Form -->
-            <div class="card border-warning bg-light w-100">
-            <div class="card-header bg-light ">
-                <a class="btn btn-link text-black text-decoration-none" data-bs-toggle="collapse"
+            <div class="card bg-dark  w-100">
+            <div class="card-header text-center bg-dark ">
+                <a class="btn btn-link text-white text-decoration-none" data-bs-toggle="collapse"
                    href="#addCommandeForm" role="button"
                    th:attr="aria-expanded=${showcommande}"
                    aria-controls="addCommandeForm">
@@ -130,7 +130,7 @@
                                <option value="">--Choisir un produit--</option>
                                <option th:each="produit : ${produits}" th:value="${produit.id}" th:text="${produit.nom}"></option>
                         </select>
-                        <button class="btn btn-warning" type="submit">Valider</button>
+                        <button class="btn btn-success" type="submit">Valider</button>
                     </form>
                 </div>
             </div>
