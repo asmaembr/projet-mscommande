@@ -4,364 +4,67 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="33e4e273-6c24-46f2-a13f-628ef7e6ec84" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
-    <list default="true" id="33e4e273-6c24-46f2-a13f-628ef7e6ec84" name="Changes" comment="ittle tweeks before ending the project :&#10;tweek 1 = search funtionnality deleted &#10;tweek 2 = showcommande form and show produit form &#10;tweek 3 = historique of the product even if its for edit">
+    <list default="true" id="a9d1f5f8-609c-4d6e-b76f-2a7cb23c9c3a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-12-30T135733.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-12-31T192458.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-12-31T193134.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-12-31T193254.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-12-31T204221.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/resources/templates/dashboard.html" afterDir="false" />
->>>>>>> 90d71b91a470b463a66f016a4c4ebd6ac5ba0271
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="JavaScript File" />
-        <option value="CSS File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;asmaembr&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;http://github.com/asmaembr/projet-mscommande.git&quot;,
-    &quot;accountId&quot;: &quot;7bd629df-c57d-44e2-8413-efa42ffeb933&quot;
-  }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="2qtx1yiqy49K9f4SYUHjhjmtjZ7" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2rJdyN3FjM6yEWxYUq5o54JCrjM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;HTTP Request.EurekaServerApplication | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.MicroserviceCommandesApplication | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.MicroserviceProduitsApplication | #4.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.MicroserviceProduitsApplication | #5.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.MicroserviceProduitsApplication | #6.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ConfigServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.MicroserviceCommandesApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.MicroserviceProduitsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.MicroserviceWebappApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ZuulServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mbras/Documents/5IIR7/JEE/projet-mscommande/microservice-webapp/src/main/resources/static/css&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-<<<<<<< HEAD
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
-=======
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
->>>>>>> 90d71b91a470b463a66f016a4c4ebd6ac5ba0271
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.config-server [clean].executor": "Run",
+    "Maven.config-server [install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "settings.editor.splitter.proportion": "0.28134558",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static\css" />
-      <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static\icon" />
-      <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static\css\icons" />
-      <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static\icon" />
-      <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static\css" />
-      <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static\js" />
-      <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static\style" />
-      <recent name="C:\Users\mbras\Documents\5IIR7\JEE\projet-mscommande\microservice-webapp\src\main\resources\static\" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ma.commande.microservicewebapp.model" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="configurationTypes">
-      <set>
-        <option value="MicronautRunConfigurationType" />
-        <option value="QuarkusRunConfigurationType" />
-        <option value="SpringBootApplicationConfigurationType" />
-      </set>
-    </option>
-    <option name="excludedTypes">
-      <set>
-        <option value="HttpClient.HttpRequestRunConfigurationType" />
-      </set>
-    </option>
-  </component>
-  <component name="RunManager" selected="Spring Boot.ZuulServerApplication">
-    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="config-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.configserver.ConfigServerApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ma.commande.configserver.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="eureka-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.eurekaserver.EurekaServerApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ma.commande.eurekaserver.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MicroserviceCommandesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="microservice-commandes" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.microservicecommandes.MicroserviceCommandesApplication" />
-      <option name="VM_PARAMETERS" value="-Dserver.port=8080" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ma.commande.microservicecommandes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="net.ashald.envfile">
-        <option name="IS_ENABLED" value="false" />
-        <option name="IS_SUBST" value="false" />
-        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
-        <option name="IS_IGNORE_MISSING_FILES" value="false" />
-        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
-        <ENTRIES>
-          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
-        </ENTRIES>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MicroserviceProduitsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="microservice-produits" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.microserviceproduits.MicroserviceProduitsApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ma.commande.microserviceproduits.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MicroserviceWebappApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="microservice-webapp" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.microservicewebapp.MicroserviceWebappApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ZuulServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="zuul-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.zuul_server.ZuulServerApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ma.commande.zuul_server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Spring Boot.MicroserviceWebappApplication" />
-      <item itemvalue="Spring Boot.ZuulServerApplication" />
-      <item itemvalue="Spring Boot.ConfigServerApplication" />
-      <item itemvalue="Spring Boot.EurekaServerApplication" />
-      <item itemvalue="Spring Boot.MicroserviceCommandesApplication" />
-      <item itemvalue="Spring Boot.MicroserviceProduitsApplication" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.MicroserviceProduitsApplication" />
-        <item itemvalue="Spring Boot.MicroserviceCommandesApplication" />
-        <item itemvalue="Spring Boot.ZuulServerApplication" />
-        <item itemvalue="Spring Boot.EurekaServerApplication" />
-        <item itemvalue="Spring Boot.ConfigServerApplication" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
-      </set>
-    </attachedChunks>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="33e4e273-6c24-46f2-a13f-628ef7e6ec84" name="Changes" comment="" />
-      <created>1735495464099</created>
+      <changelist id="a9d1f5f8-609c-4d6e-b76f-2a7cb23c9c3a" name="Changes" comment="" />
+      <created>1736281372386</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1735495464099</updated>
-      <workItem from="1735495465458" duration="3648000" />
-      <workItem from="1735560786204" duration="13605000" />
-      <workItem from="1735631046892" duration="8118000" />
-      <workItem from="1735742708169" duration="11348000" />
-<<<<<<< HEAD
-      <workItem from="1735767033718" duration="12596000" />
-      <workItem from="1736277455559" duration="2432000" />
-=======
-      <workItem from="1735767033718" duration="12138000" />
-      <workItem from="1735824360638" duration="219000" />
-      <workItem from="1735824601408" duration="2560000" />
->>>>>>> 90d71b91a470b463a66f016a4c4ebd6ac5ba0271
+      <updated>1736281372386</updated>
+      <workItem from="1736281373274" duration="174000" />
     </task>
-    <task id="LOCAL-00001" summary="webapp that communicates with both of the apis">
-      <option name="closed" value="true" />
-      <created>1735495928040</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1735495928040</updated>
-    </task>
-    <task id="LOCAL-00002" summary="changes in the client controller">
-      <option name="closed" value="true" />
-      <created>1735560881263</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1735560881263</updated>
-    </task>
-    <task id="LOCAL-00003" summary="testing refresh of eureka">
-      <option name="closed" value="true" />
-      <created>1735669962478</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1735669962478</updated>
-    </task>
-    <task id="LOCAL-00004" summary="testing historique">
-      <option name="closed" value="true" />
-      <created>1735673829899</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1735673829899</updated>
-    </task>
-    <task id="LOCAL-00005" summary="testing historique again">
-      <option name="closed" value="true" />
-      <created>1735674121888</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1735674121888</updated>
-    </task>
-    <task id="LOCAL-00006" summary="forms created and layout done">
-      <option name="closed" value="true" />
-      <created>1735751666917</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1735751666917</updated>
-    </task>
-    <task id="LOCAL-00007" summary="fixing actions for products list">
-      <option name="closed" value="true" />
-      <created>1735767923873</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1735767923873</updated>
-    </task>
-    <task id="LOCAL-00008" summary="both of the forms working perfectly crud done for both">
-      <option name="closed" value="true" />
-      <created>1735772649738</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1735772649738</updated>
-    </task>
-    <task id="LOCAL-00009" summary="ittle tweeks before ending the project :&#10;tweek 1 = search funtionnality deleted &#10;tweek 2 = showcommande form and show produit form &#10;tweek 3 = historique of the product even if its for edit">
-      <option name="closed" value="true" />
-      <created>1735774939722</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1735774939722</updated>
-    </task>
-    <task id="LOCAL-00010" summary="little tweeks before ending the project :&#10;tweek 1 = search funtionnality deleted &#10;tweek 2 = showcommande form and show produit form &#10;tweek 3 = historique of the product even if its for edit&#10;tweek 4 = adding an animated gif">
-      <option name="closed" value="true" />
-      <created>1735779713350</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1735779713350</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="webapp that communicates with both of the apis" />
-    <MESSAGE value="changes in the client controller" />
-    <MESSAGE value="testing refresh of eureka" />
-    <MESSAGE value="testing historique" />
-    <MESSAGE value="testing historique again" />
-    <MESSAGE value="forms created and layout done" />
-    <MESSAGE value="fixing actions for products list" />
-    <MESSAGE value="both of the forms working perfectly crud done for both" />
-    <MESSAGE value="ittle tweeks before ending the project :&#10;tweek 1 = search funtionnality deleted &#10;tweek 2 = showcommande form and show produit form &#10;tweek 3 = historique of the product even if its for edit" />
-    <MESSAGE value="little tweeks before ending the project :&#10;tweek 1 = search funtionnality deleted &#10;tweek 2 = showcommande form and show produit form &#10;tweek 3 = historique of the product even if its for edit&#10;tweek 4 = adding an animated gif" />
-    <option name="LAST_COMMIT_MESSAGE" value="little tweeks before ending the project :&#10;tweek 1 = search funtionnality deleted &#10;tweek 2 = showcommande form and show produit form &#10;tweek 3 = historique of the product even if its for edit&#10;tweek 4 = adding an animated gif" />
   </component>
 </project>
