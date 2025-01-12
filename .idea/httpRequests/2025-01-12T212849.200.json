@@ -1,0 +1,4 @@
+[
+  "config.client.version",
+  "eureka.client.serviceUrl.defaultZone"
+]
