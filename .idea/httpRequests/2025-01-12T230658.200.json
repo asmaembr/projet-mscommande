@@ -1,0 +1,4 @@
+[
+  "config.client.version",
+  "spring.cloud.gateway.routes[2].predicates[0]"
+]

@@ -21,20 +21,21 @@ public class MicroserviceCommandesApplication {
 
     public static void main(String[] args) {SpringApplication.run(MicroserviceCommandesApplication.class, args);}
 
-    @Bean
-    public CommandLineRunner initData(CommandeRepository repository) {
-        Random random = new Random();
-        return args -> {
-            IntStream.rangeClosed(1, 20).forEach(i -> {
-                Commande commande = Commande.builder()
-                        .description("Commande " + i)
-                        .quantite(i * 10)
-                        .date(LocalDate.now().minusDays(random.nextLong(1,15)))
-                        .montant(100.0 + i * 10.0)
-                        .idProduit(random.nextLong(1,40))
-                        .build();
-                repository.save(commande);
-            });
-        };
-    }
+//    @Bean
+//    public CommandLineRunner initData(CommandeRepository repository) {
+//        Random random = new Random();
+//        return args -> {
+//            IntStream.rangeClosed(1, 20).forEach(i -> {
+//                Commande commande = Commande.builder()
+//                        .description("Commande " + i)
+//                        .quantite(i * 10)
+//                        .date(LocalDate.now().minusDays(random.nextLong(1,15)))
+//                        .montant(100.0 + i * 10.0)
+//                        .idProduit(random.nextLong(1,40))
+//                        .build();
+//                repository.save(commande);
+//            });
+//        };
+//    }
+
 }
