@@ -13,131 +13,131 @@ public class DataInitializer {
     @Bean
     CommandLineRunner initDatabase(ProduitRepository repository) {
         return args -> {
-            // Electronics (5 products)
+            // Électroniques (5 produits)
             repository.save(Produit.builder()
                     .nom("Dell XPS 13")
                     .prix(1500.00)
-                    .type(TypeProduit.ELECTRONICS)  // index 0
+                    .type(TypeProduit.ELECTRONIQUE)  // index 0
                     .build());
             repository.save(Produit.builder()
-                    .nom("Sony Noise Cancelling Headphones")
+                    .nom("Casque Sony à réduction de bruit")
                     .prix(350.00)
-                    .type(TypeProduit.ELECTRONICS)  // index 0
+                    .type(TypeProduit.ELECTRONIQUE)  // index 0
                     .build());
             repository.save(Produit.builder()
                     .nom("Samsung Galaxy S21")
                     .prix(999.00)
-                    .type(TypeProduit.ELECTRONICS)  // index 0
+                    .type(TypeProduit.ELECTRONIQUE)  // index 0
                     .build());
             repository.save(Produit.builder()
-                    .nom("Apple MacBook Pro 16-inch")
+                    .nom("Apple MacBook Pro 16 pouces")
                     .prix(2400.00)
-                    .type(TypeProduit.ELECTRONICS)  // index 0
+                    .type(TypeProduit.ELECTRONIQUE)  // index 0
                     .build());
             repository.save(Produit.builder()
                     .nom("GoPro HERO10 Black")
                     .prix(450.00)
-                    .type(TypeProduit.ELECTRONICS)  // index 0
+                    .type(TypeProduit.ELECTRONIQUE)  // index 0
                     .build());
 
-            // Accessories (5 products)
+            // Accessoires (5 produits)
             repository.save(Produit.builder()
                     .nom("Apple AirPods Pro")
                     .prix(250.00)
-                    .type(TypeProduit.ACCESSORIES)  // index 1
+                    .type(TypeProduit.ACCESSOIRE)  // index 1
                     .build());
             repository.save(Produit.builder()
-                    .nom("Anker PowerCore Portable Charger")
+                    .nom("Chargeur portable Anker PowerCore")
                     .prix(40.00)
-                    .type(TypeProduit.ACCESSORIES)  // index 1
+                    .type(TypeProduit.ACCESSOIRE)  // index 1
                     .build());
             repository.save(Produit.builder()
-                    .nom("Logitech Wireless Mouse")
+                    .nom("Souris sans fil Logitech")
                     .prix(30.00)
-                    .type(TypeProduit.ACCESSORIES)  // index 1
+                    .type(TypeProduit.ACCESSOIRE)  // index 1
                     .build());
             repository.save(Produit.builder()
-                    .nom("Samsung Wireless Charger")
+                    .nom("Chargeur sans fil Samsung")
                     .prix(60.00)
-                    .type(TypeProduit.ACCESSORIES)  // index 1
+                    .type(TypeProduit.ACCESSOIRE)  // index 1
                     .build());
             repository.save(Produit.builder()
-                    .nom("Bose SoundLink Bluetooth Speaker")
+                    .nom("Enceinte Bluetooth Bose SoundLink")
                     .prix(199.00)
-                    .type(TypeProduit.ACCESSORIES)  // index 1
+                    .type(TypeProduit.ACCESSOIRE)  // index 1
                     .build());
 
-            // Home Appliances (5 products)
+            // Électroménager (5 produits)
             repository.save(Produit.builder()
-                    .nom("Samsung Smart Refrigerator")
+                    .nom("Réfrigérateur intelligent Samsung")
                     .prix(2200.00)
-                    .type(TypeProduit.HOME_APPLIANCE) // index 2
+                    .type(TypeProduit.ELECTROMENAGER) // index 2
                     .build());
             repository.save(Produit.builder()
-                    .nom("Dyson V11 Cordless Vacuum")
+                    .nom("Aspirateur sans fil Dyson V11")
                     .prix(600.00)
-                    .type(TypeProduit.HOME_APPLIANCE) // index 2
+                    .type(TypeProduit.ELECTROMENAGER) // index 2
                     .build());
             repository.save(Produit.builder()
-                    .nom("Instant Pot Pressure Cooker")
+                    .nom("Cocotte-minute Instant Pot")
                     .prix(120.00)
-                    .type(TypeProduit.HOME_APPLIANCE) // index 2
+                    .type(TypeProduit.ELECTROMENAGER) // index 2
                     .build());
             repository.save(Produit.builder()
-                    .nom("Philips Sonicare Electric Toothbrush")
+                    .nom("Brosse à dents électrique Philips Sonicare")
                     .prix(180.00)
-                    .type(TypeProduit.HOME_APPLIANCE) // index 2
+                    .type(TypeProduit.ELECTROMENAGER) // index 2
                     .build());
             repository.save(Produit.builder()
-                    .nom("LG Washing Machine")
+                    .nom("Lave-linge LG")
                     .prix(850.00)
-                    .type(TypeProduit.HOME_APPLIANCE) // index 2
+                    .type(TypeProduit.ELECTROMENAGER) // index 2
                     .build());
 
-            // Sports (3 products)
+            // Sports (3 produits)
             repository.save(Produit.builder()
                     .nom("Nike Air Zoom Pegasus")
                     .prix(120.00)
-                    .type(TypeProduit.SPORTS) // index 3
+                    .type(TypeProduit.SPORT) // index 3
                     .build());
             repository.save(Produit.builder()
-                    .nom("Wilson Tennis Racket")
+                    .nom("Raquette de tennis Wilson")
                     .prix(150.00)
-                    .type(TypeProduit.SPORTS) // index 3
+                    .type(TypeProduit.SPORT) // index 3
                     .build());
             repository.save(Produit.builder()
-                    .nom("Adidas Soccer Ball")
+                    .nom("Ballon de football Adidas")
                     .prix(25.00)
-                    .type(TypeProduit.SPORTS) // index 3
+                    .type(TypeProduit.SPORT) // index 3
                     .build());
 
-            // Furniture (2 products)
+            // Meubles (2 produits)
             repository.save(Produit.builder()
-                    .nom("Ikea EKTORP Sofa")
+                    .nom("Canapé Ikea EKTORP")
                     .prix(400.00)
-                    .type(TypeProduit.FURNITURE) // index 4
+                    .type(TypeProduit.MEUBLE) // index 4
                     .build());
             repository.save(Produit.builder()
-                    .nom("Herman Miller Aeron Chair")
+                    .nom("Chaise Herman Miller Aeron")
                     .prix(1200.00)
-                    .type(TypeProduit.FURNITURE) // index 4
+                    .type(TypeProduit.MEUBLE) // index 4
                     .build());
 
-            // Music (3 products)
+            // Musique (3 produits)
             repository.save(Produit.builder()
                     .nom("Fender American Professional Stratocaster")
                     .prix(1300.00)
-                    .type(TypeProduit.MUSIC) // index 5
+                    .type(TypeProduit.MUSIQUE) // index 5
                     .build());
             repository.save(Produit.builder()
-                    .nom("Yamaha P-45 Digital Piano")
+                    .nom("Piano numérique Yamaha P-45")
                     .prix(450.00)
-                    .type(TypeProduit.MUSIC) // index 5
+                    .type(TypeProduit.MUSIQUE) // index 5
                     .build());
             repository.save(Produit.builder()
-                    .nom("Bose QuietComfort 35 II Headphones")
+                    .nom("Casque Bose QuietComfort 35 II")
                     .prix(300.00)
-                    .type(TypeProduit.MUSIC) // index 5
+                    .type(TypeProduit.MUSIQUE) // index 5
                     .build());
         };
     }

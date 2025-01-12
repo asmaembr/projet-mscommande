@@ -123,15 +123,31 @@
                         <input type="text" th:field="*{commande.quantite}" name="quantite" placeholder="Quantité">
                         <label>Date</label>
                         <input type="text" th:field="*{commande.date}" name="date" placeholder="Date">
-                        <label>Montant</label>
-                        <input type="text" th:field="*{commande.montant}" name="montant" placeholder="Montant">
-                        <label>De quel produit s'agit t'il ?</label>
-                        <select name="idProduit" th:field="*{commande.idProduit}" id="productSelect">
+                         <label>De quel produit s'agit t'il ?</label>
+                        <select name="idProduit" th:field="*{commande.idProduit}" id="productSelect" onchange="updateMontant()">
                                <option value="">--Choisir un produit--</option>
-                               <option th:each="produit : ${produits}" th:value="${produit.id}" th:text="${produit.nom}"></option>
+                               <option th:each="produit : ${produits}" th:data-prix="${produit.prix}" th:value="${produit.id}" th:text="${produit.nom}"></option>
                         </select>
+                        <label>Montant</label>
+                        <input type="text" th:field="*{commande.montant}" name="montant" id="montant" placeholder="Montant">
                         <button class="btn btn-success" type="submit">Valider</button>
                     </form>
+                    <script>
+                        function updateMontant() {
+                            var produitSelect = document.getElementById("productSelect");
+                            var quantiteInput = document.getElementById("quantite");
+                            var montantInput = document.getElementById("montant");
+
+                            var selectedOption = produitSelect.options[produitSelect.selectedIndex];
+                            var prix = selectedOption.getAttribute("data-prix");
+
+                            var quantite = parseFloat(quantiteInput.value) || 0;
+                            var montant = prix * quantite;
+
+                            montantInput.value = montant.toFixed(2);
+                        }
+                        document.getElementById("quantite").addEventListener("input", updateMontant);
+                    </script>
                 </div>
             </div>
         </div>

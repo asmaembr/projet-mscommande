@@ -14,185 +14,173 @@ public class DataInitializer {
     @Bean
     CommandLineRunner initDatabase(CommandeRepository repository) {
         return args -> {
-            // Data for earlier dates (30 entries)
+            // Données pour les dates précédentes (30 entrées)
 
-            // Electronics orders
+            // Commandes électroniques
             repository.save(Commande.builder()
-                    .description("Order for 2 Dell XPS 13 laptops")
+                    .description("Commande de 2 ordinateurs portables Dell XPS 13")
                     .quantite(2)
                     .date(LocalDate.of(2024, 12, 20))
                     .montant(3000.00) // 2 * 1500.00
                     .idProduit(1L)
                     .build());
             repository.save(Commande.builder()
-                    .description("Order for 5 Sony Noise Cancelling Headphones")
+                    .description("Commande de 5 casques Sony à réduction de bruit")
                     .quantite(5)
                     .date(LocalDate.of(2024, 12, 21))
                     .montant(1750.00) // 5 * 350.00
                     .idProduit(2L)
                     .build());
             repository.save(Commande.builder()
-                    .description("Order for 3 Samsung Galaxy S21 smartphones")
+                    .description("Commande de 3 smartphones Samsung Galaxy S21")
                     .quantite(3)
                     .date(LocalDate.of(2024, 12, 22))
                     .montant(2997.00) // 3 * 999.00
                     .idProduit(3L)
                     .build());
             repository.save(Commande.builder()
-                    .description("Order for 1 Apple MacBook Pro 16-inch")
+                    .description("Commande d'un MacBook Pro 16 pouces d'Apple")
                     .quantite(1)
                     .date(LocalDate.of(2024, 12, 23))
                     .montant(2400.00) // 1 * 2400.00
                     .idProduit(4L)
                     .build());
             repository.save(Commande.builder()
-                    .description("Order for 2 GoPro HERO10 Black cameras")
+                    .description("Commande de 2 caméras GoPro HERO10 Black")
                     .quantite(2)
                     .date(LocalDate.of(2024, 12, 24))
                     .montant(900.00) // 2 * 450.00
                     .idProduit(5L)
                     .build());
 
-            // Accessories orders
+            // Commandes d'accessoires
             repository.save(Commande.builder()
-                    .description("Order for 3 Apple AirPods Pro")
+                    .description("Commande de 3 Apple AirPods Pro")
                     .quantite(3)
                     .date(LocalDate.of(2024, 12, 25))
                     .montant(750.00) // 3 * 250.00
                     .idProduit(6L)
                     .build());
             repository.save(Commande.builder()
-                    .description("Order for 1 Anker PowerCore Portable Charger")
+                    .description("Commande d'un chargeur portable Anker PowerCore")
                     .quantite(1)
                     .date(LocalDate.of(2024, 12, 26))
                     .montant(40.00) // 1 * 40.00
                     .idProduit(7L)
                     .build());
             repository.save(Commande.builder()
-                    .description("Order for 2 Logitech Wireless Mouses")
+                    .description("Commande de 2 souris sans fil Logitech")
                     .quantite(2)
                     .date(LocalDate.of(2024, 12, 27))
                     .montant(60.00) // 2 * 30.00
                     .idProduit(8L)
                     .build());
             repository.save(Commande.builder()
-                    .description("Order for 3 Samsung Wireless Chargers")
+                    .description("Commande de 3 chargeurs sans fil Samsung")
                     .quantite(3)
                     .date(LocalDate.of(2024, 12, 28))
                     .montant(180.00) // 3 * 60.00
                     .idProduit(9L)
                     .build());
             repository.save(Commande.builder()
-                    .description("Order for 4 Bose SoundLink Bluetooth Speakers")
+                    .description("Commande de 4 enceintes Bluetooth Bose SoundLink")
                     .quantite(4)
                     .date(LocalDate.of(2024, 12, 29))
                     .montant(796.00) // 4 * 199.00
                     .idProduit(10L)
                     .build());
 
-            // Home Appliances orders
+            // Commandes d'électroménagers
             repository.save(Commande.builder()
-                    .description("Order for 1 Samsung Smart Refrigerator")
+                    .description("Commande d'un réfrigérateur intelligent Samsung")
                     .quantite(1)
                     .date(LocalDate.of(2024, 12, 30))
                     .montant(2200.00) // 1 * 2200.00
                     .idProduit(11L)
                     .build());
             repository.save(Commande.builder()
-                    .description("Order for 2 Dyson V11 Cordless Vacuums")
+                    .description("Commande de 2 aspirateurs sans fil Dyson V11")
                     .quantite(2)
                     .date(LocalDate.of(2024, 12, 31))
                     .montant(1200.00) // 2 * 600.00
                     .idProduit(12L)
                     .build());
             repository.save(Commande.builder()
-                    .description("Order for 3 Instant Pot Pressure Cookers")
+                    .description("Commande de 3 cocottes-minute Instant Pot")
                     .quantite(3)
                     .date(LocalDate.of(2025, 1, 1))
                     .montant(360.00) // 3 * 120.00
                     .idProduit(13L)
                     .build());
             repository.save(Commande.builder()
-                    .description("Order for 1 Philips Sonicare Electric Toothbrush")
+                    .description("Commande d'une brosse à dents électrique Philips Sonicare")
                     .quantite(1)
                     .date(LocalDate.of(2025, 1, 2))
                     .montant(180.00) // 1 * 180.00
                     .idProduit(14L)
                     .build());
             repository.save(Commande.builder()
-                    .description("Order for 2 LG Washing Machines")
+                    .description("Commande de 2 lave-linge LG")
                     .quantite(2)
                     .date(LocalDate.of(2025, 1, 3))
                     .montant(1700.00) // 2 * 850.00
                     .idProduit(15L)
                     .build());
 
-            // Sports orders
+            // Commandes de sport
             repository.save(Commande.builder()
-                    .description("Order for 2 Nike Air Zoom Pegasus running shoes")
+                    .description("Commande de 2 chaussures de course Nike Air Zoom Pegasus")
                     .quantite(2)
                     .date(LocalDate.of(2025, 1, 4))
                     .montant(240.00) // 2 * 120.00
                     .idProduit(16L)
                     .build());
             repository.save(Commande.builder()
-                    .description("Order for 1 Wilson Tennis Racket")
+                    .description("Commande d'une raquette de tennis Wilson")
                     .quantite(1)
                     .date(LocalDate.of(2025, 1, 5))
                     .montant(150.00) // 1 * 150.00
                     .idProduit(17L)
                     .build());
             repository.save(Commande.builder()
-                    .description("Order for 2 Adidas Soccer Balls")
+                    .description("Commande de 2 ballons de football Adidas")
                     .quantite(2)
                     .date(LocalDate.of(2025, 1, 6))
                     .montant(50.00) // 2 * 25.00
                     .idProduit(18L)
                     .build());
 
-            // Furniture orders
+            // Commandes de meubles
             repository.save(Commande.builder()
-                    .description("Order for 1 Ikea EKTORP Sofa")
+                    .description("Commande d'un canapé Ikea EKTORP")
                     .quantite(1)
                     .date(LocalDate.of(2025, 1, 7))
                     .montant(400.00) // 1 * 400.00
                     .idProduit(19L)
                     .build());
             repository.save(Commande.builder()
-                    .description("Order for 2 Herman Miller Aeron Chairs")
+                    .description("Commande de 2 chaises Herman Miller Aeron")
                     .quantite(2)
                     .date(LocalDate.of(2025, 1, 8))
                     .montant(2400.00) // 2 * 1200.00
                     .idProduit(20L)
                     .build());
 
-            // Music orders
+            // Commandes de musique
             repository.save(Commande.builder()
-                    .description("Order for 1 Fender American Professional Stratocaster")
+                    .description("Commande d'une Fender American Professional Stratocaster")
                     .quantite(1)
                     .date(LocalDate.of(2025, 1, 9))
                     .montant(1300.00) // 1 * 1300.00
                     .idProduit(21L)
                     .build());
             repository.save(Commande.builder()
-                    .description("Order for 3 Yamaha P-45 Digital Pianos")
+                    .description("Commande de 3 pianos numériques Yamaha P-45")
                     .quantite(3)
                     .date(LocalDate.of(2025, 1, 10))
                     .montant(1350.00) // 3 * 450.00
                     .idProduit(22L)
                     .build());
-
-            // Data for the last 10 days (realistic history)
-            for (int i = 0; i < 10; i++) {
-                LocalDate orderDate = LocalDate.now().minusDays(i);
-                repository.save(Commande.builder()
-                        .description("Order for product " + (i + 1))
-                        .quantite(1)
-                        .date(orderDate)
-                        .montant(100.00 + (i * 50)) // Dynamic price
-                        .idProduit((long) (i + 1))
-                        .build());
-            }
         };
     }
 }

@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1466a049-c607-4ddc-9236-87cac25c6183" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/config/DataInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+    <list default="true" id="1466a049-c607-4ddc-9236-87cac25c6183" name="Changes" comment="DataInitializers added to the ms">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/MicroserviceCommandesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/MicroserviceCommandesApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/MicroserviceProduitsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/MicroserviceProduitsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/config/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/config/DataInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/config/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/config/DataInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/model/TypeProduit.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/model/TypeProduit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/model/TypeProduit.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/model/TypeProduit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/resources/templates/dashboard.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +111,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MicroserviceProduitsApplication9002">
+  <component name="RunManager" selected="Spring Boot.MicroserviceCommandesApplication9003">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ma.commande.apigateway.ApiGatewayApplication" />
@@ -284,10 +282,10 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
-      <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
-      <item itemvalue="Spring Boot.MicroserviceProduitsApplication8002" />
+      <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Spring Boot.MicroserviceProduitsApplication9002" />
+      <item itemvalue="Spring Boot.MicroserviceProduitsApplication8002" />
       <item itemvalue="Spring Boot.MicroserviceCommandesApplication9003" />
       <item itemvalue="Spring Boot.MicroserviceCommandesApplication8003" />
       <item itemvalue="Spring Boot.MicroserviceWebappApplication9010" />
@@ -312,7 +310,7 @@
       <option name="presentableId" value="Default" />
       <updated>1736712551814</updated>
       <workItem from="1736712553357" duration="5055000" />
-      <workItem from="1736721626749" duration="638000" />
+      <workItem from="1736721626749" duration="1635000" />
     </task>
     <task id="LOCAL-00001" summary="api gateway working perfectly">
       <option name="closed" value="true" />
@@ -322,7 +320,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736719489983</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="DataInitializers added to the ms">
+      <option name="closed" value="true" />
+      <created>1736722437612</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1736722437612</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,6 +336,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="api gateway working perfectly" />
-    <option name="LAST_COMMIT_MESSAGE" value="api gateway working perfectly" />
+    <MESSAGE value="DataInitializers added to the ms" />
+    <option name="LAST_COMMIT_MESSAGE" value="DataInitializers added to the ms" />
   </component>
 </project>
