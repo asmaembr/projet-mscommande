@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1466a049-c607-4ddc-9236-87cac25c6183" name="Changes" comment="DataInitializers added to the ms">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/config/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-commandes/src/main/java/ma/commande/microservicecommandes/config/DataInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/config/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/config/DataInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/model/TypeProduit.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-produits/src/main/java/ma/commande/microserviceproduits/model/TypeProduit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/model/TypeProduit.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/java/ma/commande/microservicewebapp/model/TypeProduit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/resources/templates/dashboard.html" afterDir="false" />
-    </list>
+    <list default="true" id="1466a049-c607-4ddc-9236-87cac25c6183" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -310,7 +303,7 @@
       <option name="presentableId" value="Default" />
       <updated>1736712551814</updated>
       <workItem from="1736712553357" duration="5055000" />
-      <workItem from="1736721626749" duration="1635000" />
+      <workItem from="1736721626749" duration="1754000" />
     </task>
     <task id="LOCAL-00001" summary="api gateway working perfectly">
       <option name="closed" value="true" />
@@ -328,7 +321,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736722437612</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="montant auto calculated and the api gateway if is the path from webapp">
+      <option name="closed" value="true" />
+      <created>1736723378146</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1736723378146</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,6 +338,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="api gateway working perfectly" />
     <MESSAGE value="DataInitializers added to the ms" />
-    <option name="LAST_COMMIT_MESSAGE" value="DataInitializers added to the ms" />
+    <MESSAGE value="montant auto calculated and the api gateway if is the path from webapp" />
+    <option name="LAST_COMMIT_MESSAGE" value="montant auto calculated and the api gateway if is the path from webapp" />
   </component>
 </project>
