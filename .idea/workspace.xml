@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1466a049-c607-4ddc-9236-87cac25c6183" name="Changes" comment="" />
+    <list default="true" id="1466a049-c607-4ddc-9236-87cac25c6183" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/23f9b620-0426-4047-bc2c-25ab9bc131d4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/23f9b620-0426-4047-bc2c-25ab9bc131d4/storage_v2/_src_/database/PRODUITS.6tfR8g.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/23f9b620-0426-4047-bc2c-25ab9bc131d4/storage_v2/_src_/database/PRODUITS.6tfR8g/schema/INFORMATION_SCHEMA.NBgcMw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/23f9b620-0426-4047-bc2c-25ab9bc131d4/storage_v2/_src_/database/PRODUITS.6tfR8g/schema/PUBLIC.aaZQjQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-webapp/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-webapp/src/main/resources/templates/dashboard.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -304,6 +311,7 @@
       <updated>1736712551814</updated>
       <workItem from="1736712553357" duration="5055000" />
       <workItem from="1736721626749" duration="1754000" />
+      <workItem from="1736972691504" duration="3317000" />
     </task>
     <task id="LOCAL-00001" summary="api gateway working perfectly">
       <option name="closed" value="true" />

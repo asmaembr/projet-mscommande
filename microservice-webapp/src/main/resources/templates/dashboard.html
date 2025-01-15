@@ -123,7 +123,7 @@
                         <input type="text" th:field="*{commande.quantite}" name="quantite" placeholder="Quantité">
                         <label>Date</label>
                         <input type="text" th:field="*{commande.date}" name="date" placeholder="Date">
-                         <label>De quel produit s'agit t'il ?</label>
+                         <label>De quel produit s'agit-il ?</label>
                         <select name="idProduit" th:field="*{commande.idProduit}" id="productSelect" onchange="updateMontant()">
                                <option value="">--Choisir un produit--</option>
                                <option th:each="produit : ${produits}" th:data-prix="${produit.prix}" th:value="${produit.id}" th:text="${produit.nom}"></option>
