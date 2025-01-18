@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1466a049-c607-4ddc-9236-87cac25c6183" name="Changes" comment="delete .idea">
+    <list default="true" id="1466a049-c607-4ddc-9236-87cac25c6183" name="Changes" comment="changing github repo for properties">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,6 +310,7 @@
       <workItem from="1736972691504" duration="3755000" />
       <workItem from="1737024819076" duration="12000" />
       <workItem from="1737038120795" duration="572000" />
+      <workItem from="1737204769457" duration="305000" />
     </task>
     <task id="LOCAL-00001" summary="api gateway working perfectly">
       <option name="closed" value="true" />
@@ -358,7 +360,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736976610554</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="changing github repo for properties">
+      <option name="closed" value="true" />
+      <created>1737204828049</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1737204828049</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,6 +380,7 @@
     <MESSAGE value="montant auto calculated and the api gateway if is the path from webapp" />
     <MESSAGE value="done eureka" />
     <MESSAGE value="delete .idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete .idea" />
+    <MESSAGE value="changing github repo for properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="changing github repo for properties" />
   </component>
 </project>
