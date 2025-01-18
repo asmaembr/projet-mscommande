@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5988ae8-8842-4e45-b061-70eb7ee07f51" name="Changes" comment="server port added" />
+    <list default="true" id="b5988ae8-8842-4e45-b061-70eb7ee07f51" name="Changes" comment="project done" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,6 +47,7 @@
     "Spring Boot.EurekaServerApplication.executor": "Run",
     "Spring Boot.MicroserviceCommandesApplication.executor": "Run",
     "Spring Boot.MicroserviceProduitsApplication.executor": "Run",
+    "Spring Boot.MicroserviceWebappApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -139,7 +140,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737205238456</updated>
-      <workItem from="1737205239741" duration="301000" />
+      <workItem from="1737205239741" duration="554000" />
     </task>
     <task id="LOCAL-00001" summary="server port added">
       <option name="closed" value="true" />
@@ -149,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737205526898</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="project done">
+      <option name="closed" value="true" />
+      <created>1737205755733</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1737205755733</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +166,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="server port added" />
-    <option name="LAST_COMMIT_MESSAGE" value="server port added" />
+    <MESSAGE value="project done" />
+    <option name="LAST_COMMIT_MESSAGE" value="project done" />
   </component>
 </project>
