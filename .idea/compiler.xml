@@ -8,7 +8,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
-        <module name="zuul-server" />
         <module name="config-server" />
         <module name="eureka-server" />
       </profile>
@@ -33,7 +32,6 @@
       <module name="microservice-commandes" options="-parameters" />
       <module name="microservice-produits" options="-parameters" />
       <module name="microservice-webapp" options="-parameters" />
-      <module name="zuul-server" options="-parameters" />
     </option>
   </component>
 </project>
